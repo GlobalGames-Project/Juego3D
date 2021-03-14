@@ -4,54 +4,84 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-    CharacterController controller;
+    Rigidbody rb;
 
     Transform groundCheck;
     public LayerMask groundMask;
     public float groundDistance = 0.4f;
 
-    public float speed = 12f;
-    public float gravity = -9.81f;
-    public float jumpHeight = 3f;
+    public float speed = 10f;
+    public float jumpForce = 10f;
+    public float slideForce = 400f;
 
-    Vector3 velocity;
-    bool isGrounded = true;
+    private Vector3 playerScale;
+    private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
+
+    bool isGrounded;
     bool isSprinting;
 
     private void Start() {
         groundCheck = transform.GetChild(0).transform;
-        controller = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
+        playerScale = transform.localScale;
+        
     }
 
     void Update() {
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if (isGrounded && velocity.y < 0) {velocity.y = -2;}
+        float x = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float z = Input.GetAxis("Vertical") * speed * Time.deltaTime;
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        transform.Translate(x, 0, z);
 
-        Vector3 move = transform.right * x + transform.forward * z;
-
-        controller.Move(move * speed * Time.deltaTime);
-
-        if (Input.GetButtonDown("Jump")) velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        if (Input.GetButtonDown("Jump") && isGrounded) rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
 
         if (Input.GetButtonDown("Sprint")) Sprint(true);
 
         if (Input.GetButtonUp("Sprint") && isSprinting) Sprint(false);
-        
 
-        velocity.y += gravity * Time.deltaTime;
+        if (Input.GetButtonDown("Crounch")) StartCrouch();
 
-        controller.Move(velocity * Time.deltaTime);
+        if (Input.GetButtonUp("Crounch")) StopCrouch();
     }
 
     private void Sprint(bool isWalkToSprint) {
-        if (isWalkToSprint) speed = speed * 2;
-        else speed = speed / 2;
+        if (isWalkToSprint) AumentarSpeed();
+        else ReducirSpeed();
 
         isSprinting = !isSprinting;
+    }
+
+    private void StartCrouch() {
+        transform.localScale = crouchScale;
+        transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
+
+        ReducirSpeed();
+
+        if (isSprinting && isGrounded) {
+            Slide();
+            rb.AddForce(transform.forward * slideForce);
+        }
+    }
+
+    private void StopCrouch() {
+        AumentarSpeed();
+
+        transform.localScale = playerScale;
+        transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
+    }
+
+    public void Slide() {
+        
+    }
+
+    public void ReducirSpeed() {
+        speed = speed / 2;
+    }
+
+    public void AumentarSpeed() {
+        speed = speed * 2;
     }
 }
