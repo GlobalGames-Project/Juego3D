@@ -11,6 +11,9 @@ public class WallRunScript : MonoBehaviour
     //Assingables
     public Transform orientation;
 
+    //Sliding
+    private Vector3 normalVector = Vector3.up;
+
     /// <summary>
     /// Wall run Tutorial stuff, scroll down for full movement
     /// </summary>
@@ -67,14 +70,49 @@ public class WallRunScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-  
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        GameObject thePlayer = GameObject.Find("Player");
+        PlayerMovement playerScript = thePlayer.GetComponent<PlayerMovement>();
+
+        //WallRun Jump
+        if (Input.GetButtonDown("Jump") && !playerScript.isGrounded)
+        {
+            WallJump();
+        }
         CheckForWall();
         WallRunInput();
 
     }
+
+    private void WallJump()
+    {
+        GameObject thePlayer = GameObject.Find("Player");
+        PlayerMovement playerScript = thePlayer.GetComponent<PlayerMovement>();
+
+        //Walljump
+        if (isWallRunning)
+        {
+            //normal jump
+            if (isWallLeft && !Input.GetKey(KeyCode.D) || isWallRight && !Input.GetKey(KeyCode.A))
+            {
+                rb.AddForce(Vector2.up * playerScript.jumpForce * 1.5f);
+                rb.AddForce(normalVector * playerScript.jumpForce * 0.5f);
+            }
+
+            //sidwards wallhop
+            if (isWallRight || isWallLeft && Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) rb.AddForce(-orientation.up * playerScript.jumpForce * 1f);
+            if (isWallRight && Input.GetKey(KeyCode.A)) rb.AddForce(-orientation.right * playerScript.jumpForce * 3.2f);
+            if (isWallLeft && Input.GetKey(KeyCode.D)) rb.AddForce(orientation.right * playerScript.jumpForce * 3.2f);
+
+            //Always add forward force
+            rb.AddForce(orientation.forward * playerScript.jumpForce * 1f);
+
+        }
+    }
+
 }

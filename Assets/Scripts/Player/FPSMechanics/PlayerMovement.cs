@@ -17,8 +17,8 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 playerScale;
     private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
 
-    bool isGrounded;
-    bool isSprinting;
+    public bool isGrounded;
+    public bool isSprinting;
 
     private void Start() {
         groundCheck = transform.GetChild(0).transform;
