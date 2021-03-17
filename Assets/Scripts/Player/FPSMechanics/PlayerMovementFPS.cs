@@ -2,21 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class PlayerMovementFPS {
 
-    public GameObject player;
-    public Rigidbody rb;
+    private GameObject player;
+    private Rigidbody rb;
 
     private Vector3 playerScale;
     private Vector3 crouchScale = new Vector3(1, 0.5f, 1);
 
-    public float speed = 10f;
+    public float speed = normalSpeed;
+
+    public static float normalSpeed = 10f;
+    public static float runningSpeed = 20f;
+    public static float crounchingSpeed = 5f;
+
     public float slideForce = 400f;
     public float jumpForce = 10f;
 
-    Transform groundCheck;
-    public LayerMask groundMask;
-    public float groundDistance = 0.4f;
+    private Transform groundCheck;
+    private LayerMask groundMask;
+    private float groundDistance = 0.4f;
 
     public PlayerMovementFPS(GameObject currentPlayer, LayerMask suelo) {
         player = currentPlayer;
@@ -34,27 +40,26 @@ public class PlayerMovementFPS {
     }
 
     public void Sprint() {
-        speed = speed * 2;
+        speed = runningSpeed;
     }
 
     public void StopSprint() {
-        speed = speed / 2;
+        speed = normalSpeed;
     }
 
-    public void Slide()
-    {
+    public void Slide() {
         Crounch();
         rb.AddForce(player.transform.forward * slideForce);
     }
 
     public void Crounch() {
-        speed = speed / 2;
+        speed = crounchingSpeed;
         player.transform.localScale = crouchScale;
         player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - 0.5f, player.transform.position.z);
     }
 
     public void StopCrounch() {
-        speed = speed * 2;
+        speed = normalSpeed;
         player.transform.localScale = playerScale;
         player.transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 0.5f, player.transform.position.z);
     }

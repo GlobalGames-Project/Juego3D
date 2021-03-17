@@ -9,20 +9,27 @@ public class ControllerFPS : MonoBehaviour {
 
     public LayerMask suelo;
     float timeNotCheckingGround;
+    float timeToResetForcesAfterSliding = 10f;
 
+    [SerializeField]
     CameraMovement camera;
+    [SerializeField]
     PlayerMovementFPS movemenet;
-                            
+
+
     void Start() {
         movemenet = new PlayerMovementFPS(this.gameObject, suelo);
+        camera = new CameraMovement(this.gameObject, this.transform.GetChild(1).GetComponent<Camera>());
     }
 
     private void FixedUpdate() {
         movemenet.Move();
+        
     }
 
     void Update() {
         CheckState();
+        camera.Movement();
     }
 
     private void CheckState() {
@@ -80,6 +87,7 @@ public class ControllerFPS : MonoBehaviour {
         if (InputsFPS.Crounch()) {
             movemenet.Slide();
             currentState = State.crounching;
+            timeToResetForcesAfterSliding = Time.time + 1;
         }
     }
 
@@ -103,7 +111,4 @@ public class ControllerFPS : MonoBehaviour {
             currentState = State.walking;
         }
     }
- 
-
-    
 }
