@@ -8,8 +8,9 @@ public class ControllerFPS : MonoBehaviour {
     public State currentState;
 
     public LayerMask suelo;
+    public LayerMask pared;
     float timeNotCheckingGround;
-    float timeToResetForcesAfterSliding = 10f;
+    float timeNotCheckingWallrun;
 
     [SerializeField]
     CameraMovement camera;
@@ -18,7 +19,7 @@ public class ControllerFPS : MonoBehaviour {
 
 
     void Start() {
-        movemenet = new PlayerMovementFPS(this.gameObject, suelo);
+        movemenet = new PlayerMovementFPS(this.gameObject, suelo, pared);
         camera = new CameraMovement(this.gameObject, this.transform.GetChild(1).GetComponent<Camera>());
     }
 
@@ -47,14 +48,19 @@ public class ControllerFPS : MonoBehaviour {
             case State.jumping:
                 Jump();
                 CheckGround();
+                WallRun();
                 break;
             case State.doubleJumping:
                 CheckGround();
+                WallRun();
                 break;
             case State.crounching:
                 Jump();
                 Run();
                 StopCrounch();
+                break;
+            case State.wallRunning:
+                Jump();
                 break;
         }
     }
@@ -65,6 +71,7 @@ public class ControllerFPS : MonoBehaviour {
             if (currentState == State.jumping) { currentState = State.doubleJumping; }
             else {
                 if (currentState == State.crounching) { movemenet.StopCrounch(); }
+                if (currentState == State.wallRunning) { StopWallRun(); }
                 timeNotCheckingGround = Time.time + 1;
                 currentState = State.jumping;
             }
@@ -87,7 +94,6 @@ public class ControllerFPS : MonoBehaviour {
         if (InputsFPS.Crounch()) {
             movemenet.Slide();
             currentState = State.crounching;
-            timeToResetForcesAfterSliding = Time.time + 1;
         }
     }
 
@@ -110,5 +116,17 @@ public class ControllerFPS : MonoBehaviour {
             movemenet.StopCrounch();
             currentState = State.walking;
         }
+    }
+
+    private void WallRun() {
+        if (movemenet.WallRunCheck() && timeNotCheckingWallrun <= Time.time) {
+            currentState = State.wallRunning;
+            movemenet.WallRun();
+        }
+    }
+
+    private void StopWallRun() {
+        movemenet.StopWallRun();
+        timeNotCheckingWallrun = Time.time + 1;
     }
 }
