@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class CameraMovement {
 
-    public float mouseSensibility = 100f;
+    public float mouseSensibility = 200f;
     private Transform playerBody;
     private Camera camera;
 
@@ -26,5 +26,9 @@ public class CameraMovement {
 
         camera.transform.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+    }
+
+    public void StartRotationWallRun() {
+        
     }
 }

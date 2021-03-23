@@ -9,8 +9,8 @@ public class ControllerFPS : MonoBehaviour {
 
     public LayerMask suelo;
     public LayerMask pared;
-    float timeNotCheckingGround;
-    float timeNotCheckingWallrun;
+    private float timeNotCheckingGround;
+    private float timeNotCheckingWallrun;
 
     [SerializeField]
     CameraMovement camera;
@@ -25,12 +25,16 @@ public class ControllerFPS : MonoBehaviour {
 
     private void FixedUpdate() {
         movemenet.Move();
-        
     }
 
     void Update() {
         CheckState();
         camera.Movement();
+        if (currentState == State.wallRunning) {
+            movemenet.WallRun();
+            if (Input.GetKeyUp(KeyCode.W)) { StopWallRun(); }
+            if (!movemenet.WallRunCheck()) { StopWallRun(); } 
+        }
     }
 
     private void CheckState() {
@@ -67,13 +71,16 @@ public class ControllerFPS : MonoBehaviour {
 
     private void Jump() {
         if (InputsFPS.Jump()) {
-            movemenet.Jump();
-            if (currentState == State.jumping) { currentState = State.doubleJumping; }
+            if (currentState == State.jumping) {
+                currentState = State.doubleJumping;
+                movemenet.DoubleJump();
+            }
             else {
-                if (currentState == State.crounching) { movemenet.StopCrounch(); }
                 if (currentState == State.wallRunning) { StopWallRun(); }
+                if (currentState == State.crounching) { movemenet.StopCrounch(); }
                 timeNotCheckingGround = Time.time + 1;
                 currentState = State.jumping;
+                movemenet.Jump();
             }
         }
     }
@@ -121,7 +128,7 @@ public class ControllerFPS : MonoBehaviour {
     private void WallRun() {
         if (movemenet.WallRunCheck() && timeNotCheckingWallrun <= Time.time) {
             currentState = State.wallRunning;
-            movemenet.WallRun();
+            movemenet.StartWallRun();
         }
     }
 

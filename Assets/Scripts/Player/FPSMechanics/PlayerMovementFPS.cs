@@ -19,7 +19,8 @@ public class PlayerMovementFPS
     public static float crounchingSpeed = 5f;
 
     public float slideForce = 400f;
-    public float jumpForce = 10f;
+    public float jumpForce = 30f;
+    public float doubleJumpForce = 50f;
 
     private Transform groundCheck;
     private LayerMask groundMask;
@@ -27,7 +28,7 @@ public class PlayerMovementFPS
 
     private LayerMask wallRunMask;
     private bool isWallRight, isWallLeft;
-    public float wallrunForce = 20f, maxWallSpeed = 20f;
+    public float wallrunForce = 100f, maxWallSpeed = 20f;
 
     public PlayerMovementFPS(GameObject currentPlayer, LayerMask suelo, LayerMask pared)
     {
@@ -82,6 +83,11 @@ public class PlayerMovementFPS
         rb.AddForce(player.transform.up * jumpForce, ForceMode.Impulse);
     }
 
+    public void DoubleJump()
+    {
+        rb.AddForce(player.transform.up * doubleJumpForce, ForceMode.Impulse);
+    }
+
     public bool GroundCheck()
     {
         return Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
@@ -95,20 +101,31 @@ public class PlayerMovementFPS
         return isWallLeft || isWallRight;
     }
 
-    public void WallRun() {
+    public void StartWallRun() {
+        ResetForces();
         rb.useGravity = false;
+    }
 
+    public void WallRun() {
+       
         if (rb.velocity.magnitude <= maxWallSpeed) {
-            rb.AddForce(player.transform.forward * wallrunForce * Time.deltaTime);
+            
+           rb.AddForce(-player.transform.up * wallrunForce * Time.deltaTime);
 
             if (isWallRight)
-                rb.AddForce(player.transform.right * wallrunForce / 5 * Time.deltaTime);
+                rb.AddForce(player.transform.right * wallrunForce * Time.deltaTime);
             else
-                rb.AddForce(-player.transform.right * wallrunForce / 5 * Time.deltaTime);
+                rb.AddForce(-player.transform.right * wallrunForce * Time.deltaTime);
         }
     }
 
     public void StopWallRun() {
+        ResetForces();
         rb.useGravity = true;
+    }
+
+    private void ResetForces() {
+        rb.isKinematic = true;
+        rb.isKinematic = false;
     }
 }
