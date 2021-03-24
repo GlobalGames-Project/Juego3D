@@ -32,8 +32,8 @@ public class ControllerFPS : MonoBehaviour {
         camera.Movement();
         if (currentState == State.wallRunning) {
             movemenet.WallRun();
-            if (Input.GetKeyUp(KeyCode.W)) { StopWallRun(); }
-            if (!movemenet.WallRunCheck()) { StopWallRun(); } 
+            if (Input.GetKeyUp(KeyCode.W) || !movemenet.WallRunCheck()) { StopWallRun(); }
+          
         }
     }
 
@@ -135,5 +135,7 @@ public class ControllerFPS : MonoBehaviour {
     private void StopWallRun() {
         movemenet.StopWallRun();
         timeNotCheckingWallrun = Time.time + 1;
+        
+        currentState = State.jumping;
     }
 }

@@ -98,6 +98,9 @@ public class PlayerMovementFPS
         isWallRight = Physics.Raycast(player.transform.position, player.transform.right, 1f, wallRunMask);
         isWallLeft = Physics.Raycast(player.transform.position, -player.transform.right, 1f, wallRunMask);
 
+        if (isWallLeft || isWallRight) Debug.Log("sanganchao");
+
+        
         return isWallLeft || isWallRight;
     }
 
