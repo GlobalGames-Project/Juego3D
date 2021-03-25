@@ -24,7 +24,7 @@ public class ControllerFPS : MonoBehaviour {
     }
 
     private void FixedUpdate() {
-        movemenet.Move();
+        movemenet.Move(currentState);
     }
 
     void Update() {
@@ -73,15 +73,16 @@ public class ControllerFPS : MonoBehaviour {
         if (InputsFPS.Jump()) {
             if (currentState == State.jumping) {
                 currentState = State.doubleJumping;
-                movemenet.DoubleJump();
             }
             else {
-                if (currentState == State.wallRunning) { StopWallRun(); }
+                if (currentState == State.wallRunning) {
+                    StopWallRun();
+                }
                 if (currentState == State.crounching) { movemenet.StopCrounch(); }
                 timeNotCheckingGround = Time.time + 1;
                 currentState = State.jumping;
-                movemenet.Jump();
             }
+            movemenet.Jump();
         }
     }
 
@@ -92,7 +93,7 @@ public class ControllerFPS : MonoBehaviour {
     private void Run() {
         if (InputsFPS.Run()) {
             if (currentState == State.crounching) { movemenet.StopCrounch(); }
-            movemenet.Sprint();
+            movemenet.StartSprint();
             currentState = State.running;
         }
     }
@@ -113,7 +114,7 @@ public class ControllerFPS : MonoBehaviour {
 
     private void Crounch() {
         if (InputsFPS.Crounch()) {
-            movemenet.Crounch();
+            movemenet.StartCrounch();
             currentState = State.crounching;
         }
     }
