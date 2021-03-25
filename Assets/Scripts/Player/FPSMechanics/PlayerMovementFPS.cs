@@ -32,7 +32,7 @@ public class PlayerMovementFPS {
     private float groundDistance = 0.4f;
 
     private LayerMask wallRunMask;
-    private bool isWallRight, isWallLeft;
+    public bool isWallRight, isWallLeft;
     public float wallrunForce = 100f, maxWallSpeed = 20f;
 
     public float jumpForce = 1000f;

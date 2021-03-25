@@ -32,6 +32,7 @@ public class ControllerFPS : MonoBehaviour {
         camera.Movement();
         if (currentState == State.wallRunning) {
             movemenet.WallRun();
+   //         camera.StartRotationWallRun();
             if (Input.GetKeyUp(KeyCode.W) || !movemenet.WallRunCheck()) { StopWallRun(); }
           
         }

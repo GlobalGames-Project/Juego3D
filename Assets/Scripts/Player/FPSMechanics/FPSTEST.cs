@@ -25,7 +25,7 @@ public class FPSTEST : MonoBehaviour{
     private float groundDistance = 0.4f;
 
     private LayerMask wallRunMask;
-    private bool isWallRight, isWallLeft;
+    public bool isWallRight, isWallLeft;
     public float wallrunForce = 100f, maxWallSpeed = 20f;
 
     public FPSTEST(GameObject currentPlayer, LayerMask suelo, LayerMask pared)
