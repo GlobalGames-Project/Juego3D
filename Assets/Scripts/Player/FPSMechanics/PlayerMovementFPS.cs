@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class PlayerMovementFPS {
+public class PlayerMovementFPS
+{
 
     private Rigidbody rb;
     private GameObject player;
@@ -158,6 +159,10 @@ public class PlayerMovementFPS {
         rb.useGravity = true;
     }
 
+    public bool getSide()
+    {
+        return isWallRight;
+    }
 
 
 
@@ -180,6 +185,11 @@ public class PlayerMovementFPS {
     private void CounterMovement(float x, float y, Vector2 mag)
     {
         if (currentState == ControllerFPS.State.jumping || currentState == ControllerFPS.State.doubleJumping) return;
+
+        if (currentState == ControllerFPS.State.wallRunning)
+        {
+            if (isWallLeft && Input.GetKey(KeyCode.A) || isWallRight && Input.GetKey(KeyCode.D)) { rb.AddForce(player.transform.right * -x * moveSpeed * Time.deltaTime * multiplier); }
+        }
 
         if (currentState == ControllerFPS.State.crounching)
         {

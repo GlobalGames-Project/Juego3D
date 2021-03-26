@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControllerFPS : MonoBehaviour {
+public class ControllerFPS : MonoBehaviour
+{
 
-    public enum State { walking, running, jumping, crounching, wallRunning, doubleJumping}
+    public enum State { walking, running, jumping, crounching, wallRunning, doubleJumping }
     public State currentState;
 
     public LayerMask suelo;
@@ -18,28 +19,34 @@ public class ControllerFPS : MonoBehaviour {
     PlayerMovementFPS movemenet;
 
 
-    void Start() {
+    void Start()
+    {
         movemenet = new PlayerMovementFPS(this.gameObject, suelo, pared);
         camera = new CameraMovement(this.gameObject, this.transform.GetChild(1).GetComponent<Camera>());
     }
 
-    private void FixedUpdate() {
+    private void FixedUpdate()
+    {
         movemenet.Move(currentState);
     }
 
-    void Update() {
+    void Update()
+    {
         CheckState();
         camera.Movement();
-        if (currentState == State.wallRunning) {
+        if (currentState == State.wallRunning)
+        {
             movemenet.WallRun();
-   //         camera.StartRotationWallRun();
+            camera.StartRotationWallRun(movemenet.getSide());
             if (Input.GetKeyUp(KeyCode.W) || !movemenet.WallRunCheck()) { StopWallRun(); }
-          
         }
+        else { camera.StopRotationRun(); }
     }
 
-    private void CheckState() {
-        switch (currentState) {
+    private void CheckState()
+    {
+        switch (currentState)
+        {
             case State.walking:
                 Jump();
                 Run();
@@ -70,13 +77,18 @@ public class ControllerFPS : MonoBehaviour {
         }
     }
 
-    private void Jump() {
-        if (InputsFPS.Jump()) {
-            if (currentState == State.jumping) {
+    private void Jump()
+    {
+        if (InputsFPS.Jump())
+        {
+            if (currentState == State.jumping)
+            {
                 currentState = State.doubleJumping;
             }
-            else {
-                if (currentState == State.wallRunning) {
+            else
+            {
+                if (currentState == State.wallRunning)
+                {
                     StopWallRun();
                 }
                 if (currentState == State.crounching) { movemenet.StopCrounch(); }
@@ -87,57 +99,72 @@ public class ControllerFPS : MonoBehaviour {
         }
     }
 
-    private void CheckGround() {
+    private void CheckGround()
+    {
         if (movemenet.GroundCheck() && timeNotCheckingGround <= Time.time) { currentState = State.walking; }
     }
 
-    private void Run() {
-        if (InputsFPS.Run()) {
+    private void Run()
+    {
+        if (InputsFPS.Run())
+        {
             if (currentState == State.crounching) { movemenet.StopCrounch(); }
             movemenet.StartSprint();
             currentState = State.running;
         }
     }
 
-    private void Slide() {
-        if (InputsFPS.Crounch()) {
+    private void Slide()
+    {
+        if (InputsFPS.Crounch())
+        {
             movemenet.Slide();
             currentState = State.crounching;
         }
     }
 
-    private void StopRun() {
-        if (InputsFPS.StopRun()) {
+    private void StopRun()
+    {
+        if (InputsFPS.StopRun())
+        {
             movemenet.StopSprint();
             currentState = State.walking;
         }
     }
 
-    private void Crounch() {
-        if (InputsFPS.Crounch()) {
+    private void Crounch()
+    {
+        if (InputsFPS.Crounch())
+        {
             movemenet.StartCrounch();
             currentState = State.crounching;
         }
     }
 
-    private void StopCrounch() {
-        if (InputsFPS.Crounch()) {
+    private void StopCrounch()
+    {
+        if (InputsFPS.Crounch())
+        {
             movemenet.StopCrounch();
             currentState = State.walking;
         }
     }
 
-    private void WallRun() {
-        if (movemenet.WallRunCheck() && timeNotCheckingWallrun <= Time.time) {
+    private void WallRun()
+    {
+        if (movemenet.WallRunCheck() && timeNotCheckingWallrun <= Time.time)
+        {
             currentState = State.wallRunning;
             movemenet.StartWallRun();
+
         }
     }
 
-    private void StopWallRun() {
+    private void StopWallRun()
+    {
         movemenet.StopWallRun();
         timeNotCheckingWallrun = Time.time + 1;
-        
+
         currentState = State.jumping;
     }
 }

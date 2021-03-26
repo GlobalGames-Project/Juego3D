@@ -234,11 +234,15 @@ MonoBehaviour:
     m_Bits: 1024
   camera:
     mouseSensibility: 0
+    maxWallRunCameraTilt: 0
+    wallRunCameraTilt: 0
   movemenet:
     slideForce: 0
     moveSpeed: 0
     counterMovement: 0
     slideCounterMovement: 0
+    isWallRight: 0
+    isWallLeft: 0
     wallrunForce: 0
     maxWallSpeed: 0
     jumpForce: 0
