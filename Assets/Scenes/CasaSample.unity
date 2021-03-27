@@ -283,6 +283,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 40.168003, y: 0, z: 0}
+--- !u!1 &181487726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5770226313019770343, guid: 61ba60ecdb7f16948b93532498269026,
+    type: 3}
+  m_PrefabInstance: {fileID: 552690592}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &181487727
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181487726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.4759774, y: 4.3456306, z: 6.995913}
+  m_Center: {x: -4.908782, y: 1.6728145, z: 1.6520392}
+--- !u!114 &181487729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181487726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17eee3ecbf9ac3a40ac8a19c64f49871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &248223753
 PrefabInstance:
   m_ObjectHideFlags: 0
