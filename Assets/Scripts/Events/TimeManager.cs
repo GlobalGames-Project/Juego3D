@@ -23,7 +23,7 @@ public class TimeManager : MonoBehaviour
             EventGenerator.current.MamaTimeEnter();
         }
 
-        if ((int)tiempo >= 2)
+        if (tiempo >= 2 && tiempo <= 2.5)
         {
             EventGenerator.current.CatTiemEnter();
         }
