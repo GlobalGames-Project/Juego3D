@@ -13,9 +13,9 @@ public class EventGenerator : MonoBehaviour
         current = this;
     }
 
-    
+    // Evento Madre
     public event Action onMamaTimeEnter;
-    public event Action onCatTimeEnter;
+    
     public void MamaTimeEnter()
     {
         if(onMamaTimeEnter!= null)
@@ -24,6 +24,8 @@ public class EventGenerator : MonoBehaviour
         }
     }
 
+    //Evento Gato
+    public event Action onCatTimeEnter;
     public void CatTiemEnter()
     {
         if (onCatTimeEnter != null)
@@ -31,10 +33,12 @@ public class EventGenerator : MonoBehaviour
             onCatTimeEnter();
         }
     }
+
+
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.Instantiate(eventosPrefabs[0], Vector3.forward , Quaternion.identity);
+        
         EventGenerator.current.onCatTimeEnter += eliminar;
     }
 
