@@ -34,6 +34,15 @@ public class EventGenerator : MonoBehaviour
         }
     }
 
+    public event Action<int> onDialogueShow;
+    public void DialogueShow(int id)
+    {
+        if (onDialogueShow != null)
+        {
+            onDialogueShow(id);
+        }
+    }
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +59,7 @@ public class EventGenerator : MonoBehaviour
 
     private void eliminar()
     {
-        GameObject.Destroy(eventosPrefabs[0]);
+        
     }
 
 

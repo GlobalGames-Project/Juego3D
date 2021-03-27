@@ -19,24 +19,26 @@ public class DialogueManager : MonoBehaviour
     public float typingSpeed;
 
     public AudioSource speekAudio;
-    
+
+    public int id; 
 
 
     // Start is called before the first frame update
     void Start()
     {
-        EventGenerator.current.onCatTimeEnter += conversar;
+        EventGenerator.current.onDialogueShow += conversar;
         sentences = new Queue<string>();
         
-
     }
 
-    private void conversar()
+    private void conversar(int _id)
     {
-        dialoguePanel.SetActive(true);
-        hablando = true;
-        startDialogue();
-        
+        if (id == _id)
+        {
+            dialoguePanel.SetActive(true);
+            hablando = true;
+            startDialogue();
+        }
     }
 
     void startDialogue()
@@ -78,4 +80,8 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        EventGenerator.current.onDialogueShow -= conversar;
+    }
 }

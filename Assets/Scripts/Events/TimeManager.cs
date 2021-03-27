@@ -18,7 +18,7 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         tiempo += 1 * Time.deltaTime;
-        if ((int)tiempo >= 1)
+        if (tiempo >= 1 && tiempo<=1.4)
         {
             EventGenerator.current.MamaTimeEnter();
         }
