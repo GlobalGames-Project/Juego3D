@@ -1,0 +1,31 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class MamaController : MonoBehaviour
+{
+    public Rigidbody rb;
+    Vector3 movimiento = Vector3.forward;
+    // Start is called before the first frame update
+    void Start()
+    {
+        EventGenerator.current.onMamaTimeEnter += enterMama;
+       
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void enterMama()
+    {
+        rb.MovePosition(rb.position+movimiento*0.1f);
+    }
+
+    private void OnDestroy()
+    {
+        EventGenerator.current.onMamaTimeEnter -= enterMama;
+    }
+}
