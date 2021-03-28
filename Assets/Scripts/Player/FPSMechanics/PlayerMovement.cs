@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     public bool isGrounded;
     public bool isSprinting;
 
+
     private void Start() {
         groundCheck = transform.GetChild(0).transform;
         rb = GetComponent<Rigidbody>();
