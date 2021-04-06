@@ -32,4 +32,5 @@ public class MamaController : MonoBehaviour
     {
         EventGenerator.current.onMamaTimeEnter -= enterMama;
     }
+    
 }

@@ -34,6 +34,8 @@ public class EventGenerator : MonoBehaviour
         }
     }
 
+
+    //Evento de salir dialogo
     public event Action<int> onDialogueShow;
     public void DialogueShow(int id)
     {
@@ -42,6 +44,8 @@ public class EventGenerator : MonoBehaviour
             onDialogueShow(id);
         }
     }
+
+    
 
 
     // Start is called before the first frame update
