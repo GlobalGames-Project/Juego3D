@@ -297,7 +297,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181487726}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.4759774, y: 4.3456306, z: 6.995913}
@@ -1027,8 +1027,6 @@ GameObject:
   - component: {fileID: 767223895}
   - component: {fileID: 767223894}
   - component: {fileID: 767223893}
-  - component: {fileID: 767223892}
-  - component: {fileID: 767223898}
   m_Layer: 0
   m_Name: PC
   m_TagString: Untagged
@@ -1036,29 +1034,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &767223892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767223891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c35b68948fe693488bbf667aac18b3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: PC
-    sentenceList:
-    - Bueno, voy a jugar al LoL
-    - mucho
-    - mucho
-  dialoguePanel: {fileID: 319760191}
-  displayText: {fileID: 398824473}
-  typingSpeed: 0
-  speekAudio: {fileID: 767223898}
-  id: 2
 --- !u!114 &767223893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1071,7 +1046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6352dc424a4ed2c4193dd27d2f51bafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  id: 1
 --- !u!65 &767223894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1146,102 +1121,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &767223898
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 767223891}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &942601391
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1942,6 +1821,59 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1656741133
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1656741135}
+  - component: {fileID: 1656741134}
+  m_Layer: 0
+  m_Name: Textos/Dialogos del juego
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1656741134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656741133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 140b199a68bb87b4a8b348209cc48992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 319760191}
+  dialogoMadre:
+  - Hola hijo
+  - ' soy tu madre'
+  dialogoPC:
+  - Jugemos al LoL
+  dialogoWindow:
+  - Bonitas vistas
+  textDialogo: {fileID: 398824473}
+  isDialogoActive: 0
+--- !u!4 &1656741135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656741133}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.974009, y: 0.5428791, z: 14.093149}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1987022506
 GameObject:
   m_ObjectHideFlags: 0
@@ -1954,6 +1886,7 @@ GameObject:
   - component: {fileID: 1987022509}
   - component: {fileID: 1987022508}
   - component: {fileID: 1987022507}
+  - component: {fileID: 1987022512}
   m_Layer: 0
   m_Name: Window
   m_TagString: Untagged
@@ -1972,8 +1905,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 4.3467345, y: 1.5648587, z: 1}
+  m_Center: {x: 1.673367, y: -0.28242907, z: 0}
 --- !u!23 &1987022508
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2035,6 +1968,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1987022512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987022506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc50231c394b8224980b753720f79878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 2
 --- !u!1 &2055377179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,6 +2137,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 638299824721530201, guid: febca8ccfc8d94e4cbc917f811a69c8e,
+        type: 3}
+      propertyPath: id
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 638299824721530202, guid: febca8ccfc8d94e4cbc917f811a69c8e,
         type: 3}
       propertyPath: m_Name
@@ -2233,7 +2184,9 @@ PrefabInstance:
       propertyPath: dialogue.sentenceList.Array.data[1]
       value: este no
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 524304541300564186, guid: febca8ccfc8d94e4cbc917f811a69c8e, type: 3}
+    - {fileID: 7088265550421852312, guid: febca8ccfc8d94e4cbc917f811a69c8e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: febca8ccfc8d94e4cbc917f811a69c8e, type: 3}
 --- !u!1 &1125062613909458451 stripped
 GameObject:
