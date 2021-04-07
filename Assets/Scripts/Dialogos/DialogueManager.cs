@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        EventGenerator.current.onDialogueShow += conversar;
+     //   EventGenerator.current.onDialogueShow += conversar;
         sentences = new Queue<string>();
         
     }
@@ -56,7 +56,7 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayNextSentence()
     {
-
+        
         Debug.Log(sentences.Count);
         if (sentences.Count <= 0)
         {
@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour
         {
             activeSentence = sentences.Dequeue();
             displayText.text = activeSentence;
-            speekAudio.Play();
+            
         }
         
 
@@ -76,11 +76,13 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        /*
         //Cuando sale el texto que puedas darle a enter para que el dialogo siga
         if (!estaHablando)
         {
             dialoguePanel.SetActive(false);
         }
+        */
         
         if(estaHablando && Input.GetKeyDown(KeyCode.Space))
         {
