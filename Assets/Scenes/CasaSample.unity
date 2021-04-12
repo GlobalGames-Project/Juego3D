@@ -1046,7 +1046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6352dc424a4ed2c4193dd27d2f51bafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
+  id: 2
 --- !u!65 &767223894
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1852,12 +1852,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 319760191}
   dialogoMadre:
-  - Hola hijo
-  - ' soy tu madre'
+  - "Hola cari\xF1o"
+  - soy tu madre
+  - te tarigo algo de comer
+  - "\xBFComo estas?"
   dialogoPC:
   - Jugemos al LoL
   dialogoWindow:
   - Bonitas vistas
+  dialogoEstudiar:
+  - Bueno voy a estudiar un poco
+  dialogoMadrePositivo:
+  - "De nada cari\xF1o, te quiero."
+  dialogoMadreNegativo:
+  - 
+  dialogoMadreNeutral:
+  - 
   textDialogo: {fileID: 398824473}
   isDialogoActive: 0
 --- !u!4 &1656741135
@@ -1980,7 +1990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc50231c394b8224980b753720f79878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
+  id: 1
 --- !u!1 &2055377179
 GameObject:
   m_ObjectHideFlags: 0

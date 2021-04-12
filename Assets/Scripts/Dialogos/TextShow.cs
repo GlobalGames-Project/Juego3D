@@ -12,6 +12,10 @@ public class TextShow : MonoBehaviour
     public string[] dialogoMadre;
     public string[] dialogoPC;
     public string[] dialogoWindow;
+    public string[] dialogoEstudiar;
+    public string[] dialogoMadrePositivo;
+    public string[] dialogoMadreNegativo;
+    public string[] dialogoMadreNeutral;
 
     public TextMeshProUGUI textDialogo;
     public bool isDialogoActive;
@@ -44,14 +48,26 @@ public class TextShow : MonoBehaviour
         string[] dialogo;
         switch (valor)
         {
-            case 0:
+            case (int)EnumDialogosId.dialogoMadreInicial:
                 dialogo = dialogoMadre;
                 break;
-            case 1:
+            case (int)EnumDialogosId.dialogoJugarPC:
                 dialogo = dialogoPC;
                 break;
-            case 2:
+            case (int)EnumDialogosId.dialogoAbrirVentana:
                 dialogo = dialogoWindow;
+                break;
+            case (int)EnumDialogosId.dialogoEstudiar:
+                dialogo = dialogoEstudiar;
+                break;
+            case (int)EnumDialogosId.dialogoMadreNegativo:
+                dialogo = dialogoMadreNegativo;
+                break;
+            case (int)EnumDialogosId.dialogoMadreNeutral:
+                dialogo = dialogoMadreNeutral;
+                break;
+            case (int)EnumDialogosId.dialogoMadrePositivo:
+                dialogo = dialogoMadrePositivo;
                 break;
             default:
                 dialogo = null;
@@ -104,5 +120,10 @@ public class TextShow : MonoBehaviour
 
         textDialogo.text = "";
         dialoguePanel.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        EventGenerator.current.onDialogueShow -= AbrirCajaDialogo;
     }
 }
