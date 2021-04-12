@@ -11,20 +11,18 @@ public class Gancho {
     private SpringJoint joint;
     public float spring, damper, massScale;
 
-    public Gancho(GameObject gunTip, GameObject cam, GameObject player, LayerMask enemyGrapple) {
-        this.gunTip = gunTip.transform;
-        this.cam = cam.transform;
-        this.player = player.transform;
+    public Gancho(Transform gunTip, Transform cam, Transform player, LayerMask enemyGrapple) {
+        this.gunTip = gunTip;
+        this.cam = cam;
+        this.player = player;
         this.enemyGrapple = enemyGrapple;
+        lr = gunTip.GetComponent<LineRenderer>();
     }
 
     //Called after Update
-    void LateUpdate()
-    {
-        DrawRope();
-    }
+   
 
-    void StartGrapple()
+    public void StartGrapple()
     {
         RaycastHit hit;
         if (Physics.Raycast(cam.position, cam.forward, out hit, maxDistance, enemyGrapple)) { }
@@ -60,7 +58,7 @@ public class Gancho {
 
     private Vector3 currentGrapplePosition;
 
-    void DrawRope()
+    public void DrawRope()
     {
         //If not grappling, don't draw rope
         if (!joint) return;
