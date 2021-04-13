@@ -7,12 +7,12 @@ public class Gancho {
     private Vector3 grapplePoint;
     public LayerMask enemyGrapple;
     public Transform gunTip, cam, player;
-    private float maxDistance = 100f;
+    private float maxDistance = 70f;
     private SpringJoint joint;
-    public float spring, damper, massScale;
+    public float spring = 18f, damper = 7f, massScale = 4.5f;
 
     public Gancho(Transform gunTip, Transform cam, Transform player, LayerMask enemyGrapple) {
-        this.gunTip = gunTip;
+        this.gunTip = gunTip.GetChild(0).transform;
         this.cam = cam;
         this.player = player;
         this.enemyGrapple = enemyGrapple;
@@ -53,7 +53,7 @@ public class Gancho {
     public void StopGrapple()
     {
         lr.positionCount = 0;
-        //Destroy(joint);
+        joint = null;
     }
 
     private Vector3 currentGrapplePosition;

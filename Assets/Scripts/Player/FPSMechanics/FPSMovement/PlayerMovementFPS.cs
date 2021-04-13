@@ -13,17 +13,17 @@ public class PlayerMovementFPS
 
     private Vector3 playerScale;
     private Vector3 crounchScale = new Vector3(1, 0.5f, 1);
-    static float crouchGravityMultiplier = 1f;
+    private static float crouchGravityMultiplier = 1f;
     public float slideForce = 7000f;
 
-    static float defaultGravityMultiplier = 10f;
+    private static float defaultGravityMultiplier = 10f;
     private float actualGravityMultiplayer = defaultGravityMultiplier;
 
     public float moveSpeed = 4500;
-    static float defaultMaxSpeed = 20;
-    static float sprintingMaxSpeed = 40;
-    float currentMaxSpeed = defaultMaxSpeed;
-    float multiplier = 1f, multiplierV = 1f;
+    private static float defaultMaxSpeed = 20;
+    private static float sprintingMaxSpeed = 40;
+    private float currentMaxSpeed = defaultMaxSpeed;
+    private float multiplier = 1f, multiplierV = 1f;
 
     private float threshold = 0.01f;
     public float counterMovement = 0.175f;
@@ -34,7 +34,7 @@ public class PlayerMovementFPS
     private float groundDistance = 0.4f;
 
     private LayerMask wallRunMask;
-    public bool isWallRight, isWallLeft;
+    private bool isWallRight, isWallLeft;
     public float wallrunForce = 100f, maxWallSpeed = 20f;
 
     private LayerMask climbMask;
@@ -173,7 +173,8 @@ public class PlayerMovementFPS
         return isWallRight;
     }
 
-    public bool checkClimb() {
+    public bool checkClimb()
+    {
         return Physics.Raycast(player.transform.position, orientation.forward, 1, climbMask);
     }
 
@@ -192,8 +193,8 @@ public class PlayerMovementFPS
         Vector3 vel = rb.velocity;
         //if (rb.velocity.y < 0.5f)
         //{
-            rb.velocity = new Vector3(vel.x, 0, vel.z);
-            rb.AddForce(orientation.forward * 500 * Time.deltaTime);
+        rb.velocity = new Vector3(vel.x, 0, vel.z);
+        rb.AddForce(orientation.forward * 500 * Time.deltaTime);
         //}
 
         //Push character up
@@ -201,7 +202,7 @@ public class PlayerMovementFPS
             rb.AddForce(orientation.up * climbForce * Time.deltaTime);
 
         //Doesn't Push into the wall
-        
+
     }
 
 

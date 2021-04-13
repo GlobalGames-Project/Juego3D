@@ -31,13 +31,14 @@ public class ControllerFPS : MonoBehaviour
     private void FixedUpdate()
     {
         movemenet.Move(currentState);
-        
+
     }
 
     private void OnCollisionStay(Collision collision)
     {
         LayerMask layer = collision.gameObject.layer;
-        if (((LayerMask.GetMask("Default") & 1 << layer) == 1 << layer) )  {
+        if (((LayerMask.GetMask("Default") & 1 << layer) == 1 << layer))
+        {
             movemenet.evoidGettingStuck();
         }
     }
@@ -56,7 +57,7 @@ public class ControllerFPS : MonoBehaviour
 
         if (currentState == State.climb)
         {
-            if (!Input.GetKey(KeyCode.W) || !movemenet.checkClimb() ) { StopClimb(); }
+            if (!Input.GetKey(KeyCode.W) || !movemenet.checkClimb()) { StopClimb(); }
             movemenet.Climb();
         }
     }
