@@ -6,7 +6,7 @@ public class MamaController : MonoBehaviour
 {
     public Rigidbody rb;
     Vector3 movimiento = Vector3.forward;
-    public int id; // id para los dialogos
+    public int id_dialogo; // id para los dialogos
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +25,7 @@ public class MamaController : MonoBehaviour
     private void enterMama()
     {
         rb.MovePosition(rb.position+movimiento*0.1f);
-        EventGenerator.current.DialogueShow(id);
+        EventGenerator.current.DialogueShow(id_dialogo);
     }
 
     private void OnDestroy()

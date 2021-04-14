@@ -5,7 +5,7 @@ using UnityEngine;
 public class WindowController : MonoBehaviour
 {
 
-    public int id; // id para los dialogos
+    public int id = (int)EnumDialogosId.dialogoAbrirVentana ; // id para los dialogos
 
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)

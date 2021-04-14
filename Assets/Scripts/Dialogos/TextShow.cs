@@ -8,6 +8,7 @@ public class TextShow : MonoBehaviour
 {
 
     public GameObject dialoguePanel;
+    public GameObject player;
 
     public string[] dialogoMadre;
     public string[] dialogoPC;
