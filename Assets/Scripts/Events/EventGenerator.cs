@@ -2,11 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class EventGenerator : MonoBehaviour
 {
     public GameObject[] eventosPrefabs;
     public static EventGenerator current;
+    public GameObject popUpBox;
+    public Animator animator;
+    public TMP_Text popUpText;
 
     private void Awake()
     {
@@ -44,9 +49,6 @@ public class EventGenerator : MonoBehaviour
             onDialogueShow(id);
         }
     }
-
-    
-
 
     // Start is called before the first frame update
     void Start()
