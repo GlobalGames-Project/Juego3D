@@ -15,7 +15,15 @@ public enum EnumEventosId
     eventoMadrePositivo ,
     eventoMadreNeutro ,
     eventoMadreNegativo ,
-    evntoJugarLoL 
+    evntoJugarLoL ,
+    eventoGritarMadre,
+    eventoLlorarHermano,
+    eventoAnsiedad,
+    eventoBorracho,
+    eventoAjudarMadre,
+    eventoHablarMadre,
+    eventoUsarBaño,
+    eventoLimpiar
 
 
 }

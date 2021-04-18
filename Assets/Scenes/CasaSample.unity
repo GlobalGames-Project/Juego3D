@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44300658, g: 0.4921953, b: 0.57192475, a: 1}
+  m_IndirectSpecularColor: {r: 0.4430063, g: 0.4921952, b: 0.5719241, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1684,7 +1684,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1314773800942450902, guid: cc192c1f0bdb15e4a89ef300b09b1a9d, type: 3}
+  - {fileID: 4894151730927233692, guid: cc192c1f0bdb15e4a89ef300b09b1a9d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2097,7 +2097,7 @@ GameObject:
   - component: {fileID: 2067198060}
   - component: {fileID: 2067198059}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: LuzVentana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2114,7 +2114,7 @@ Light:
   serializedVersion: 10
   m_Type: 0
   m_Shape: 0
-  m_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 1}
+  m_Color: {r: 0, g: 0, b: 0.7830189, a: 1}
   m_Intensity: 2.87
   m_Range: 15.8435
   m_SpotAngle: 145.31
@@ -2252,11 +2252,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7088265550421852312, guid: febca8ccfc8d94e4cbc917f811a69c8e,
         type: 3}
-      propertyPath: dialogue.sentenceList.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088265550421852312, guid: febca8ccfc8d94e4cbc917f811a69c8e,
-        type: 3}
       propertyPath: displayText
       value: 
       objectReference: {fileID: 398824473}
@@ -2265,6 +2260,16 @@ PrefabInstance:
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 319760191}
+    - target: {fileID: 7088265550421852312, guid: febca8ccfc8d94e4cbc917f811a69c8e,
+        type: 3}
+      propertyPath: dialogue.sentenceList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088265550421852312, guid: febca8ccfc8d94e4cbc917f811a69c8e,
+        type: 3}
+      propertyPath: dialogue.sentenceList.Array.data[1]
+      value: este no
+      objectReference: {fileID: 0}
     - target: {fileID: 7088265550421852312, guid: febca8ccfc8d94e4cbc917f811a69c8e,
         type: 3}
       propertyPath: dialogue.sentenceList.Array.data[3]
@@ -2281,11 +2286,6 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.sentenceList.Array.data[5]
       value: ketchup
-      objectReference: {fileID: 0}
-    - target: {fileID: 7088265550421852312, guid: febca8ccfc8d94e4cbc917f811a69c8e,
-        type: 3}
-      propertyPath: dialogue.sentenceList.Array.data[1]
-      value: este no
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 524304541300564186, guid: febca8ccfc8d94e4cbc917f811a69c8e, type: 3}
