@@ -8,21 +8,22 @@ public class PlayerMovementFPS
 
     private Rigidbody rb;
     private GameObject player;
+    private Transform orientation;
     private ControllerFPS.State currentState;
 
     private Vector3 playerScale;
     private Vector3 crounchScale = new Vector3(1, 0.5f, 1);
-    static float crouchGravityMultiplier = 1f;
+    private static float crouchGravityMultiplier = 1f;
     public float slideForce = 7000f;
 
-    static float defaultGravityMultiplier = 10f;
+    private static float defaultGravityMultiplier = 10f;
     private float actualGravityMultiplayer = defaultGravityMultiplier;
 
     public float moveSpeed = 4500;
-    static float defaultMaxSpeed = 20;
-    static float sprintingMaxSpeed = 40;
-    float currentMaxSpeed = defaultMaxSpeed;
-    float multiplier = 1f, multiplierV = 1f;
+    private static float defaultMaxSpeed = 20;
+    private static float sprintingMaxSpeed = 40;
+    private float currentMaxSpeed = defaultMaxSpeed;
+    private float multiplier = 1f, multiplierV = 1f;
 
     private float threshold = 0.01f;
     public float counterMovement = 0.175f;
@@ -33,12 +34,15 @@ public class PlayerMovementFPS
     private float groundDistance = 0.4f;
 
     private LayerMask wallRunMask;
-    public bool isWallRight, isWallLeft;
+    private bool isWallRight, isWallLeft;
     public float wallrunForce = 100f, maxWallSpeed = 20f;
+
+    private LayerMask climbMask;
+    public float climbForce = 100000f, maxClimbSpeed = 10f;
 
     public float jumpForce = 1000f;
 
-    public PlayerMovementFPS(GameObject currentPlayer, LayerMask suelo, LayerMask pared)
+    public PlayerMovementFPS(GameObject currentPlayer, LayerMask suelo, LayerMask pared, LayerMask escalada)
     {
         player = currentPlayer;
         rb = currentPlayer.GetComponent<Rigidbody>();
@@ -46,6 +50,8 @@ public class PlayerMovementFPS
         groundMask = suelo;
         playerScale = player.transform.localScale;
         wallRunMask = pared;
+        climbMask = escalada;
+        orientation = player.transform.GetChild(2).transform;
     }
 
     public void Move(ControllerFPS.State state)
@@ -66,14 +72,19 @@ public class PlayerMovementFPS
         if (y > 0 && yMag > currentMaxSpeed) y = 0;
         if (y < 0 && yMag < -currentMaxSpeed) y = 0;
 
-        rb.AddForce(player.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
-        rb.AddForce(player.transform.right * x * moveSpeed * Time.deltaTime * multiplier);
+        rb.AddForce(orientation.transform.forward * y * moveSpeed * Time.deltaTime * multiplier * multiplierV);
+        rb.AddForce(orientation.transform.right * x * moveSpeed * Time.deltaTime * multiplier);
+    }
+
+    public void evoidGettingStuck()
+    {
+        rb.AddForce(-orientation.transform.forward * 1 * moveSpeed * Time.deltaTime * multiplier * multiplierV);
     }
 
     public void Slide()
     {
         StartCrounch();
-        rb.AddForce(player.transform.forward * slideForce);
+        rb.AddForce(orientation.transform.forward * slideForce);
     }
 
     public void StartCrounch()
@@ -125,11 +136,8 @@ public class PlayerMovementFPS
 
     public bool WallRunCheck()
     {
-        isWallRight = Physics.Raycast(player.transform.position, player.transform.right, 1f, wallRunMask);
-        isWallLeft = Physics.Raycast(player.transform.position, -player.transform.right, 1f, wallRunMask);
-
-        if (isWallLeft || isWallRight) Debug.Log("sanganchao");
-
+        isWallRight = Physics.Raycast(player.transform.position, orientation.right, 1f, wallRunMask);
+        isWallLeft = Physics.Raycast(player.transform.position, -orientation.right, 1f, wallRunMask);
 
         return isWallLeft || isWallRight;
     }
@@ -145,12 +153,13 @@ public class PlayerMovementFPS
         if (rb.velocity.magnitude <= maxWallSpeed)
         {
 
-            rb.AddForce(-player.transform.up * wallrunForce * Time.deltaTime);
+            rb.AddForce(orientation.forward * wallrunForce * Time.deltaTime);
 
+            //Make sure char sticks to wall
             if (isWallRight)
-                rb.AddForce(player.transform.right * wallrunForce * Time.deltaTime);
+                rb.AddForce(orientation.right * wallrunForce / 5 * Time.deltaTime);
             else
-                rb.AddForce(-player.transform.right * wallrunForce * Time.deltaTime);
+                rb.AddForce(-orientation.right * wallrunForce / 5 * Time.deltaTime);
         }
     }
 
@@ -162,6 +171,38 @@ public class PlayerMovementFPS
     public bool getSide()
     {
         return isWallRight;
+    }
+
+    public bool checkClimb()
+    {
+        return Physics.Raycast(player.transform.position, orientation.forward, 1, climbMask);
+    }
+
+    public void StartClimb()
+    {
+        rb.useGravity = false;
+    }
+
+    public void StopClimb()
+    {
+        rb.useGravity = true;
+    }
+
+    public void Climb()
+    {
+        Vector3 vel = rb.velocity;
+        //if (rb.velocity.y < 0.5f)
+        //{
+        rb.velocity = new Vector3(vel.x, 0, vel.z);
+        rb.AddForce(orientation.forward * 500 * Time.deltaTime);
+        //}
+
+        //Push character up
+        if (rb.velocity.magnitude < maxClimbSpeed)
+            rb.AddForce(orientation.up * climbForce * Time.deltaTime);
+
+        //Doesn't Push into the wall
+
     }
 
 
@@ -199,11 +240,11 @@ public class PlayerMovementFPS
 
         if (Mathf.Abs(mag.x) > threshold && Mathf.Abs(x) < 0.05f || (mag.x < -threshold && x > 0) || (mag.x > threshold && x < 0))
         {
-            rb.AddForce(moveSpeed * player.transform.right * Time.deltaTime * -mag.x * counterMovement);
+            rb.AddForce(moveSpeed * orientation.right * Time.deltaTime * -mag.x * counterMovement);
         }
         if (Mathf.Abs(mag.y) > threshold && Mathf.Abs(y) < 0.05f || (mag.y < -threshold && y > 0) || (mag.y > threshold && y < 0))
         {
-            rb.AddForce(moveSpeed * player.transform.forward * Time.deltaTime * -mag.y * counterMovement);
+            rb.AddForce(moveSpeed * orientation.forward * Time.deltaTime * -mag.y * counterMovement);
         }
 
         //Limit diagonal running. This will also cause a full stop if sliding fast and un-crouching, so not optimal.
