@@ -24,16 +24,27 @@ public class EventGenerator : MonoBehaviour
         }
     }
 
-    //Evento Gato
-    public event Action onCatTimeEnter;
-    public void CatTiemEnter()
+    //Evento elimina movimiento por salida del dialogo
+    public event Action onDialogueGoing;
+    public void DialogueGoing()
     {
-        if (onCatTimeEnter != null)
+        if (onDialogueGoing != null)
         {
-            onCatTimeEnter();
+            onDialogueGoing();
         }
     }
 
+    public event Action onDialogueFinish;
+    public void DialogueFinish()
+    {
+        if (onDialogueFinish != null)
+        {
+            onDialogueFinish();
+        }
+    }
+
+
+    //Evento de salir dialogo
     public event Action<int> onDialogueShow;
     public void DialogueShow(int id)
     {
@@ -44,11 +55,14 @@ public class EventGenerator : MonoBehaviour
     }
 
 
+    
+
+
     // Start is called before the first frame update
     void Start()
     {
         
-        EventGenerator.current.onCatTimeEnter += eliminar;
+        EventGenerator.current.onDialogueGoing += eliminar;
     }
 
     // Update is called once per frame
