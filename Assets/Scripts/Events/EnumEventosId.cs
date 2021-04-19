@@ -15,7 +15,7 @@ public enum EnumEventosId
     eventoMadrePositivo ,
     eventoMadreNeutro ,
     eventoMadreNegativo ,
-    evntoJugarLoL 
+    evntoJugarLoL,
 
-
+    size
 }
