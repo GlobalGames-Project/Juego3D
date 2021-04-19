@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
 public class EventObject
 {
     private List<bool> activeEventos = new List<bool>();
 
     public EventObject() {
-        for (int I = 0; I < (int)EnumEventosId.size; I++)
+        for (int I = 0; I < (int)NightmareEventosEnum.size; I++)
         {
             activeEventos.Add(false);
         }
