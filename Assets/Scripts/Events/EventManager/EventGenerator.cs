@@ -24,7 +24,7 @@ public class EventGenerator : MonoBehaviour
         }
     }
 
-    //Evento elimina movimiento por salida del dialogo
+    //Evento activo cuando sale el dialogo
     public event Action onDialogueGoing;
     public void DialogueGoing()
     {
@@ -34,6 +34,7 @@ public class EventGenerator : MonoBehaviour
         }
     }
 
+    // Evento que se activa cuando se acaba el dialogo
     public event Action onDialogueFinish;
     public void DialogueFinish()
     {
@@ -44,7 +45,7 @@ public class EventGenerator : MonoBehaviour
     }
 
 
-    //Evento de salir dialogo
+    //Evento de mostrar dialogo
     public event Action<int> onDialogueShow;
     public void DialogueShow(int id)
     {

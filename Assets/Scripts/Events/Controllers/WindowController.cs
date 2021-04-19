@@ -5,11 +5,12 @@ using UnityEngine;
 public class WindowController : MonoBehaviour
 {
 
-    public int id = (int)EnumDialogosId.dialogoAbrirVentana ; // id para los dialogos
+     int idDialogo = (int)EnumDialogosId.dialogoAbrirVentana ; // id para los dialogos
+    int idEvent = (int)EnumEventosId.eventoAbrirVentana ;
 
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        EventGenerator.current.DialogueShow(id);
+        EventGenerator.current.DialogueShow(idDialogo);
     }
 }
