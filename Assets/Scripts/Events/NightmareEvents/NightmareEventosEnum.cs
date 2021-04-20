@@ -7,32 +7,42 @@ public class NightmareEventosEnum
 
     public enum EventosEnum
     {
-        evntoPajaro,
-        eventoFumar,
-        eventoAbrirVentana,
-        eventoApagón,
-        eventoPaja,
-        eventoLol,
-        eventoStream,
-        eventoLavabo,
-        eventoRedbull,
-        eventoLibro,
-        eventoRecuerdo,
-        eventoEstudiar,
-        eventoEjercicio,
-        eventoLlorar,
-        eventoMeditar,
-        eventoReventarseDedo,
-        eventoHacerLaCama,
-        eventoGatoMuerde,
-        eventoGatoDuerme,
-        eventoGatoArana,
-        eventoGatoLame,
-        eventoGatoEscupePelo,
+        eventoDisparoRafaga,
+        eventoDisparoRacimo,
+        eventoNoPuedeCaminar,
+        eventoMasVida,
+        eventoCamara,
+        eventoGato,
+        eventoMenosVida,
+        eventoCaenGotas,
+        eventoConsejo,
+        eventoSaltasMas,
+        eventoElSueloResvala,
+        eventoVaMasLento,
+        eventoDisparoAutomatico,
+        eventoPadreVaMasLento,
+        evenoCAenLibros,
 
         size
     }
 
-    //  public List<> eventos;
+    public NightmareEvento[] eventos = {
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    };
 }
 
