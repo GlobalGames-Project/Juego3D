@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Muro
   - Suelo
+  - PlayerHitbox
   layers:
   - Default
   - TransparentFX
