@@ -10,6 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f94a1e5628cd7af41b8215577fa92932, type: 3}
-  m_Name: New Camera Effects List
+  m_Name: CameraList
   m_EditorClassIdentifier: 
-  profiles: []
+  profiles:
+  - {fileID: 11400000, guid: 047452a4a79c4bc4a91bfb60806f6164, type: 2}
+  - {fileID: 11400000, guid: edd34457c0c0e0c4cbe1ef8f8b62f4a6, type: 2}
+  - {fileID: 11400000, guid: 6b73e5211289d11488f423290f16b122, type: 2}
+  - {fileID: 11400000, guid: 603341149e43c0d43baad7b6a079e7bc, type: 2}
+  - {fileID: 11400000, guid: 91ebf792ed6fcbf41bd369d39b8e3772, type: 2}
+  - {fileID: 11400000, guid: e2ce67351995f3f40bb640ee6d94739d, type: 2}
