@@ -19,6 +19,9 @@ public class cama : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("Tocando");
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            
+        }   
     }
 }
