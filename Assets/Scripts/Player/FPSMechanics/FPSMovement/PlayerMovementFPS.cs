@@ -20,7 +20,7 @@ public class PlayerMovementFPS
     private float actualGravityMultiplayer = defaultGravityMultiplier;
 
     public float moveSpeed = 4500;
-    private static float defaultMaxSpeed = 20;
+    private static float defaultMaxSpeed = 30;
     private static float sprintingMaxSpeed = 40;
     private float currentMaxSpeed = defaultMaxSpeed;
     private float multiplier = 1f, multiplierV = 1f;
@@ -53,6 +53,10 @@ public class PlayerMovementFPS
         climbMask = escalada;
         orientation = player.transform.GetChild(2).transform;
     }
+
+    public void changeBaseSpeed(float speed) { defaultMaxSpeed = speed; }
+
+    public void changeSprintingSPeed(float speed) { sprintingMaxSpeed = speed; }
 
     public void Move(ControllerFPS.State state)
     {

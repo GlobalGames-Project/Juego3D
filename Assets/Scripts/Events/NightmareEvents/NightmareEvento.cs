@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class NightmareEvento : MonoBehaviour {
-
-
+public abstract class NightmareEvento : ScriptableObject {
     public abstract void EventoAction();
-
 }

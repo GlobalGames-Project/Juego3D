@@ -7,7 +7,7 @@ public class EventObject
     private List<bool> activeEventos = new List<bool>();
 
     public EventObject() {
-        for (int I = 0; I < (int)NightmareEventosEnum.size; I++)
+        for (int I = 0; I < (int)NightmareEventosEnum.EventosEnum.size; I++)
         {
             activeEventos.Add(false);
         }

@@ -19,7 +19,7 @@ public class ControllerFPS : MonoBehaviour
     [SerializeField]
     CameraMovement camera;
     [SerializeField]
-    PlayerMovementFPS movemenet;
+    public PlayerMovementFPS movemenet;
 
 
     void Start()
