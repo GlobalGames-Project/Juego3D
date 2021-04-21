@@ -8,6 +8,7 @@ TagManager:
   - Suelo
   - PlayerHitbox
   - FallHitbox
+  - Bullet
   layers:
   - Default
   - TransparentFX
