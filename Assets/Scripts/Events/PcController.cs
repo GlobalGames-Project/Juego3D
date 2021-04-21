@@ -2,32 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 using System;
+using UnityEngine.UI;
 
 public class PcController : MonoBehaviour
 {
 	public int id; // id para los dialogos
-	[SerializeField] Button _button1;
-	[SerializeField] Button _button2;
-	[SerializeField] Text _button1Text;
-	[SerializeField] Text _button2Text;
-	[SerializeField] Text _popupText;
+	public GameObject popUpBox;
+	public Text pregunta;
+	public Button Paja;
+	public Button Lolete;
+
+    void Start()
+	{
+		popUpBox.SetActive(false);
+	}
+
 
 	public void OnTriggerEnter(Collider other)
 	{
-		void Init(Transform canvas, string popupMessage, string btn1txt, string btn2txt, Action action)
-		{
-			_popupText.text = popupMessage;
-			_button1Text.text = btn1txt;
-			_button2Text.text = btn2txt;
-
-			transform.SetParent(canvas);
-			transform.localScale = Vector3.one;
-			GetComponent<RectTransform>().offsetMin = Vector2.zero;
-			GetComponent<RectTransform>().offsetMax = Vector2.zero;
-
+		popUpBox.SetActive(true);
+		Lolete.onClick.AddListener(() => {
+			popUpBox.SetActive(false);
 			EventGenerator.current.DialogueShow(id);
-		}
+		});
 	}
-}
+	}
