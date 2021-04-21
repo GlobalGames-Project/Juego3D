@@ -6,7 +6,7 @@ public class MamaController : MonoBehaviour
 {
     public Rigidbody rb;
     Vector3 movimiento = Vector3.forward;
-    public int id_dialogo; // id para los dialogos
+    int id_dialogo = (int)EnumDialogosId.dialogoMadreInicial; // id para los dialogos
 
     // Start is called before the first frame update
     void Start()

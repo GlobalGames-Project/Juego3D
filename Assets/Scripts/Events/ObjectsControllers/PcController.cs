@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class PcController : MonoBehaviour
 {
-	public int id; // id para los dialogos
+	 int id_dialogo_LoL = (int)EnumDialogosId.dialogoJugarPC; // id para los dialogos
 	public GameObject popUpBox;
 	public Text pregunta;
 	public Button Paja;
@@ -24,7 +24,7 @@ public class PcController : MonoBehaviour
 		popUpBox.SetActive(true);
 		Lolete.onClick.AddListener(() => {
 			popUpBox.SetActive(false);
-			EventGenerator.current.DialogueShow(id);
+			EventGenerator.current.DialogueShow(id_dialogo_LoL);
 		});
 	}
 	}
