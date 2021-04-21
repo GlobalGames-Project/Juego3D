@@ -4,11 +4,13 @@ using UnityEngine;
 
 public enum EnumDialogosId 
 {
-   dialogoMadreInicial = 0,
-   dialogoAbrirVentana = 1,
-   dialogoJugarPC = 2,
-   dialogoEstudiar = 3,
-   dialogoMadrePositivo = 4,
-   dialogoMadreNegativo = 5,
-   dialogoMadreNeutral = 6
+   dialogoMadreInicial ,
+   dialogoAbrirVentana ,
+   dialogoJugarPC,
+   dialogoEstudiar,
+   dialogoMadrePositivo,
+   dialogoMadreNegativo ,
+   dialogoMadreNeutral,
+
+    
 }
