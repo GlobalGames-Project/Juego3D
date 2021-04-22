@@ -17,6 +17,7 @@ public class TextShow : MonoBehaviour
     public string[] dialogoMadrePositivo;
     public string[] dialogoMadreNegativo;
     public string[] dialogoMadreNeutral;
+    public string[] dialogoCamaDormir;
 
     public TextMeshProUGUI textDialogo;
     public bool isDialogoActive;
@@ -70,6 +71,9 @@ public class TextShow : MonoBehaviour
                 break;
             case (int)EnumDialogosId.dialogoMadrePositivo:
                 dialogo = dialogoMadrePositivo;
+                break;
+            case (int)EnumDialogosId.dialogoCamaDormir:
+                dialogo = dialogoCamaDormir;
                 break;
             default:
                 dialogo = null;

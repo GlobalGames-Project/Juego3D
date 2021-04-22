@@ -9,7 +9,7 @@ public class PcController : MonoBehaviour
 {
 	 int id_dialogo_LoL = (int)EnumDialogosId.dialogoJugarPC; // id para los dialogos
 	public GameObject popUpBox;
-	bool isActive = true;
+	public bool isActive = true;
 	public GameObject light;
 	public Text pregunta;
 	public Button Paja;
