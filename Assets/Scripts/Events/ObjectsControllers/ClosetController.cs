@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cama : MonoBehaviour
+public class ClosetController : MonoBehaviour
 {
-    int idDialogo = (int)EnumDialogosId.dialogoCamaDormir; // id para los dialogos
+    int idDialogo = (int)EnumDialogosId.dialogoArmarioVomitar; // id para los dialogos
+    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoCamara; // id para eventos    
     bool isActive = true;
     public GameObject light;
 
@@ -18,7 +19,6 @@ public class cama : MonoBehaviour
                 isActive = false;
                 EventGenerator.current.DialogueShow(idDialogo);
                 light.SetActive(isActive);
-                TimeManager.tiempo = 960f;
             }
         }
     }

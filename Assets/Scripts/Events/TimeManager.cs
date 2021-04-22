@@ -5,7 +5,7 @@ using UnityEngine;
 public class TimeManager : MonoBehaviour
 {
 
-    public float tiempo = 0.0f; // Tiempo real que transcurre
+    public static float tiempo = 0.0f; // Tiempo real que transcurre
     public float valHora = 120f; // Valor de lo que es 1h en el juego
     public int horario = 0; // En que horario se encuentra, 0 es el principio y segun cuanto este dividido el dia X es el final
     // Start is called before the first frame update

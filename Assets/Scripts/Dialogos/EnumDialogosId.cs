@@ -11,6 +11,15 @@ public enum EnumDialogosId
    dialogoMadrePositivo,
    dialogoMadreNegativo ,
    dialogoMadreNeutral,
-
-    
+   dialogoArmarioVomitar,
+    dialogoMesaHabitacion,
+    dialogoAcariciarGato,
+    dialogoEscoba,
+    dialogoBath,
+    dialogoBorracho,
+    dialogoLlorarHermano,
+    dialogoLibro,
+    dialogoTv,
+    dialogoSillaGolpe,
+    dialogoCamaDormir
 }
