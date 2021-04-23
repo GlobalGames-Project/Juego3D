@@ -11,6 +11,7 @@ public class TimeManager : MonoBehaviour
     public int horario = 0; // En que horario se encuentra, 0 es el principio y segun cuanto este dividido el dia X es el final
     // Start is called before the first frame update
     public string nextScene;
+    public Light dayLight;
     void Start()
     {
         
@@ -20,14 +21,17 @@ public class TimeManager : MonoBehaviour
     void Update()
     {
         tiempo += 1 * Time.deltaTime;
-        if (tiempo>= valHora*0.2f && horario==0)
+        if (tiempo>= valHora*0.1f && horario==0)
         {
             horario++;
             EventGenerator.current.MamaTimeEnter();
         }
         
-
-        if(tiempo > valHora * 2)
+        if(tiempo > valHora * 2.7)
+        {
+            dayLight.intensity = 0.2f;
+        }
+        if(tiempo > valHora * 3)
         {
             SceneManager.LoadScene(nextScene);
         }

@@ -25,7 +25,7 @@ public class MamaController : MonoBehaviour
     private void enterMama()
     {
         EventGenerator.current.DialogueShow(id_dialogo);
-        CamaController.talkMom();
+        PuertaHabticionController.isActive = true;
     }
 
     private void OnDestroy()
