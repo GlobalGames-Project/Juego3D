@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PcController : MonoBehaviour
 {
 	 int id_dialogo_LoL = (int)EnumDialogosId.dialogoJugarPC; // id para los dialogos
+	int id_evento_lol = (int)NightmareEventosEnum.EventosEnum.eventoDisparoRacimo;
 	public GameObject popUpBox;
 	public bool isActive = true;
 	public GameObject light;
@@ -15,10 +16,7 @@ public class PcController : MonoBehaviour
 	public Button Paja;
 	public Button Lolete;
 
-    void Start()
-	{
-		popUpBox.SetActive(false);
-	}
+    
 
 
 	public void OnTriggerStay(Collider other)
@@ -26,6 +24,8 @@ public class PcController : MonoBehaviour
 		
 		if (isActive)
 		{
+			Lolete.GetComponentInChildren<Text>().text = "LoL";
+			Paja.GetComponentInChildren<Text>().text = "Paja";
 			if (Input.GetButton("Submit"))
 			{
 				isActive = false;
@@ -33,9 +33,15 @@ public class PcController : MonoBehaviour
 				Lolete.onClick.AddListener(() => {
 					popUpBox.SetActive(false);
 					EventGenerator.current.DialogueShow(id_dialogo_LoL);
+					DiaGameManager.eventObject.setActiveEvento(id_evento_lol);
+				});
+				Paja.onClick.AddListener(() =>
+				{
+					Paja.GetComponentInChildren<Text>().text = "FBI is Watching";
 				});
 				light.SetActive(isActive);
 			}
+
 		}
 	}
 	 
