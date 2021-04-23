@@ -42,6 +42,7 @@ public class TextShow : MonoBehaviour
     }
     public void AbrirCajaDialogo(int valor)
     {
+
         if (isDialogoActive)
         {
             CerrarDialogo();

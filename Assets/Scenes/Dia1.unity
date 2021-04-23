@@ -11757,6 +11757,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
+      propertyPath: dialogoLibro.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
       propertyPath: dialogoMadre.Array.size
       value: 7
       objectReference: {fileID: 0}
@@ -11939,6 +11944,56 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogoEstudiar.Array.size
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[0]
+      value: I should do something while being here closed
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[1]
+      value: I know, I will read that abandoned book
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[2]
+      value: Everyone told me that it was really good
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[3]
+      value: But I've never started it
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[4]
+      value: '"Mistborn - Brandon Sanderson"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[5]
+      value: 10min later
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[6]
+      value: Hmm It was better than I expected
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[7]
+      value: 10 chapters later
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[8]
+      value: Definitly it was, I should tell mom to buy the next
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLibro.Array.data[9]
+      value: Mom... Talk... Go outside...
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -12217,6 +12272,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
+      propertyPath: dialogoLlorarHermano.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
       propertyPath: dialogoMadreNegativo.Array.size
       value: 17
       objectReference: {fileID: 0}
@@ -12344,6 +12404,51 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogoAcariciarGato.Array.data[6]
       value: I love you so much
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLlorarHermano.Array.data[0]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLlorarHermano.Array.data[1]
+      value: Why?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLlorarHermano.Array.data[2]
+      value: Why you left me alone?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLlorarHermano.Array.data[3]
+      value: I miss you brother, you were everything for me
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLlorarHermano.Array.data[4]
+      value: '"snif snif"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLlorarHermano.Array.data[5]
+      value: I can't understand why you did that.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLlorarHermano.Array.data[6]
+      value: I was here, for you, for anything you wanted
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLlorarHermano.Array.data[7]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoLlorarHermano.Array.data[8]
+      value: '"Buaaaaa buaaaaa buaaaaa"'
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -12574,6 +12679,41 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogoMadrePositivo.Array.data[14]
       value: 'Mom: I love you too darling'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoMesaHabitacion.Array.data[0]
+      value: I need to drink something
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoMesaHabitacion.Array.data[1]
+      value: 'Hmmm let me think '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoMesaHabitacion.Array.data[2]
+      value: I still have an unnopened Red Bull can
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoMesaHabitacion.Array.data[3]
+      value: '"Psss"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoMesaHabitacion.Array.data[4]
+      value: '"Slurp slurp slurp"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoMesaHabitacion.Array.data[5]
+      value: Ahhhhh I love it, well, maybe today I won't
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoMesaHabitacion.Array.data[6]
+      value: be able to sleep ahhahaha shit
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e, type: 3}
