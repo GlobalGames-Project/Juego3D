@@ -18,7 +18,7 @@ public class SwitchBro : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         BroCam.enabled = true;
         MainCam.enabled = false;
