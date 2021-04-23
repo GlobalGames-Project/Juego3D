@@ -6,10 +6,14 @@ public class CamaHermanoController : MonoBehaviour
 {
     int idDialogo = (int)EnumDialogosId.dialogoLlorarHermano; // id para los dialogos
     int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoCaenGotas; // id para eventos    
-    bool isActive = true;
+    public bool isActive = true;
     public GameObject light;
 
 
+    private void Start()
+    {
+        light.SetActive(isActive);
+    }
     private void OnTriggerStay(Collider other)
     {
         if (isActive)
@@ -18,6 +22,7 @@ public class CamaHermanoController : MonoBehaviour
             {
                 isActive = false;
                 EventGenerator.current.DialogueShow(idDialogo);
+                DiaGameManager.eventObject.setActiveEvento(idEvent);
                 light.SetActive(isActive);
             }
         }

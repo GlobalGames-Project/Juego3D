@@ -121,6 +121,49 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &26014383
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26014385}
+  - component: {fileID: 26014384}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &26014384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26014383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4531de4b017dea4458e3f1bbdeb5d7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &26014385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26014383}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.6054986, y: -2.6021338, z: 15.325668}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &57030007
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17eee3ecbf9ac3a40ac8a19c64f49871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 0}
+  isActive: 1
+  light: {fileID: 236990504}
 --- !u!1 &188024421
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &236990505
 Transform:
   m_ObjectHideFlags: 0
@@ -1369,6 +1413,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TimeManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 836298936299230685, guid: 2f9fb4cacb5edc64291f3226a4630b33,
+        type: 3}
+      propertyPath: valHora
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 836298936299230685, guid: 2f9fb4cacb5edc64291f3226a4630b33,
+        type: 3}
+      propertyPath: nextScene
+      value: Nivel 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f9fb4cacb5edc64291f3226a4630b33, type: 3}
@@ -3624,6 +3678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpBox: {fileID: 1959039813}
+  isActive: 1
   light: {fileID: 629181503}
   pregunta: {fileID: 1056813760}
   Paja: {fileID: 1711032682}
@@ -4454,6 +4509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc328da84cd1be4ba8c7ce914eca178, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 917536427}
 --- !u!1 &967330724
 GameObject:
@@ -4843,6 +4899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3975ce64f2d79d4985b7ad1ae7aa29e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 326719572}
 --- !u!65 &1058988841
 BoxCollider:
@@ -4952,6 +5009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceed6d482162f2742b6fa81403b504a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 1253242101}
 --- !u!1001 &1128210513
 PrefabInstance:
@@ -5090,6 +5148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popUpBox: {fileID: 0}
+  isActive: 1
   light: {fileID: 0}
   pregunta: {fileID: 0}
   Paja: {fileID: 0}
@@ -5203,6 +5262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d954c6fd8fe6324f9110d217cce0bdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 933206167}
 --- !u!65 &1218264274
 BoxCollider:
@@ -7493,6 +7553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d33fad4834c3b3042bbfa8f7c6afc42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 967330724}
 --- !u!1 &1697480481 stripped
 GameObject:
@@ -9076,6 +9137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc50231c394b8224980b753720f79878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 424811603}
 --- !u!1 &2027823881
 GameObject:
@@ -10302,6 +10364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e918e6dc9baa8d14ba4fff9abc3ce54f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 1636989411}
 --- !u!1 &919132149524954744
 GameObject:
@@ -10333,6 +10396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8bdbd1efd4c6d4db59670d55c0dd2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 0}
 --- !u!65 &919132149524954746
 BoxCollider:
@@ -11166,6 +11230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd6524ff949020747a6e554243913b1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 386977043}
 --- !u!33 &2613796339249386749
 MeshFilter:
@@ -11834,6 +11899,16 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogoWindow.Array.data[6]
       value: No, defenitly not
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoCamaDormir.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
+        type: 3}
+      propertyPath: dialogoCamaDormir.Array.data[0]
+      value: A dormir
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e, type: 3}
@@ -14656,6 +14731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f873e363c575b4e9a9c1e6a879efde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 872752075}
 --- !u!1 &7046665407377120401
 GameObject:
@@ -15782,6 +15858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c8c070c79310dd41a225c0dae52045f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   light: {fileID: 1224661855}
 --- !u!65 &8750583679414439712
 BoxCollider:

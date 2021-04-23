@@ -6,10 +6,14 @@ public class ClosetController : MonoBehaviour
 {
     int idDialogo = (int)EnumDialogosId.dialogoArmarioVomitar; // id para los dialogos
     int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoCamara; // id para eventos    
-    bool isActive = true;
+    public bool isActive = true;
     public GameObject light;
 
 
+    private void Start()
+    {
+        light.SetActive(isActive);
+    }
     private void OnTriggerStay(Collider other)
     {
         if (isActive)
@@ -18,6 +22,7 @@ public class ClosetController : MonoBehaviour
             {
                 isActive = false;
                 EventGenerator.current.DialogueShow(idDialogo);
+                DiaGameManager.eventObject.setActiveEvento(idEvent);
                 light.SetActive(isActive);
             }
         }

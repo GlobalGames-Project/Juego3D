@@ -24,8 +24,8 @@ public class MamaController : MonoBehaviour
     //Lo que tiene que hacer la madre cuando se activa su evento
     private void enterMama()
     {
-        rb.MovePosition(rb.position+movimiento*0.1f);
         EventGenerator.current.DialogueShow(id_dialogo);
+        CamaController.talkMom();
     }
 
     private void OnDestroy()

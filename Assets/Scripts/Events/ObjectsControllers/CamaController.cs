@@ -2,24 +2,40 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cama : MonoBehaviour
+public class CamaController : MonoBehaviour
 {
     int idDialogo = (int)EnumDialogosId.dialogoCamaDormir; // id para los dialogos
-    bool isActive = true;
+    public bool isActive = true;
     public GameObject light;
+    static bool talkWithMom=false;
 
 
     private void OnTriggerStay(Collider other)
     {
         if (isActive)
         {
-            if (Input.GetButton("Submit"))
+            if (Input.GetButton("Submit") && talkWithMom)
             {
                 isActive = false;
                 EventGenerator.current.DialogueShow(idDialogo);
                 light.SetActive(isActive);
-                TimeManager.tiempo = 960f;
+                TimeManager.tiempo = ((60*2)-2);
             }
         }
+
+
+    }
+
+    private void Update()
+    {
+        if (talkWithMom)
+        {
+            light.SetActive(true);
+        }
+    }
+
+    public static void talkMom()
+    {
+        talkWithMom = true;
     }
 }
