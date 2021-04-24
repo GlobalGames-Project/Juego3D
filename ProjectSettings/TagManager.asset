@@ -13,6 +13,7 @@ TagManager:
   - Mom
   - FinalMomCheckpoint
   - MomStartChasing
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Pared
   - Escalera
   - Player
-  - 
+  - Bullet
   - 
   - 
   - 

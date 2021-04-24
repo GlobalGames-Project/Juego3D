@@ -9,7 +9,7 @@ public class MotherMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
 
     }
 
@@ -32,6 +32,7 @@ public class MotherMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "MomCheckpoint")
         {
+            Debug.Log("He tocado momcheckpoint");
             Vector3 pos = transform.position;
 
             transform.Rotate(0, 90, 0);
@@ -43,5 +44,7 @@ public class MotherMovement : MonoBehaviour
         {
             final = true;
         }
+
     }
+
 }
