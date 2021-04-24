@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public GameObject heart1, heart2, heart3, gameOver;
+    public GameObject heart1, heart2, heart3, gameOver, blackScreen;
     public static int health;
     public int whereToRespawn;
 
@@ -17,6 +17,7 @@ public class GameManagerScript : MonoBehaviour
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
         gameOver.gameObject.SetActive(false);
+        blackScreen.gameObject.SetActive(false);
 
 
 
@@ -57,11 +58,14 @@ public class GameManagerScript : MonoBehaviour
                 heart2.gameObject.SetActive(false);
                 heart3.gameObject.SetActive(false);
                 gameOver.gameObject.SetActive(true);
+                blackScreen.gameObject.SetActive(true);
+                Time.timeScale = 0;
 
                 health = 0;
 
                 if (Input.GetKey(KeyCode.R))
                 {
+                    Time.timeScale = 1;
                     UnityEngine.SceneManagement.SceneManager.LoadScene(whereToRespawn);
                     //Devolver sonido
                 }
@@ -70,6 +74,7 @@ public class GameManagerScript : MonoBehaviour
             default:
                 if (Input.GetKey(KeyCode.R))
                 {
+                    Time.timeScale = 1;
                     SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
                     // UnityEngine.SceneManagement.SceneManager.LoadScene(whereToRespawn);
                     //Devolver sonido

@@ -9,6 +9,10 @@ TagManager:
   - PlayerHitbox
   - FallHitbox
   - Bullet
+  - MomCheckpoint
+  - Mom
+  - FinalMomCheckpoint
+  - MomStartChasing
   layers:
   - Default
   - TransparentFX
