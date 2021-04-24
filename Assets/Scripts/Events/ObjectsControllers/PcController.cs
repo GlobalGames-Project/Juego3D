@@ -16,10 +16,13 @@ public class PcController : MonoBehaviour
 	public Button Paja;
 	public Button Lolete;
 
-    
 
+    private void Start()
+    {
+		light.SetActive(isActive);
+    }
 
-	public void OnTriggerStay(Collider other)
+    public void OnTriggerStay(Collider other)
 	{
 		
 		if (isActive)

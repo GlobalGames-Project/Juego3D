@@ -19,7 +19,7 @@ public class CamaController : MonoBehaviour
                 isActive = false;
                 EventGenerator.current.DialogueShow(idDialogo);
                 light.SetActive(isActive);
-                TimeManager.tiempo = ((60*2)-2);
+                TimeManager.tiempo = ((60*3)-2);
             }
         }
 

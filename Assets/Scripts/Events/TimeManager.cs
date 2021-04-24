@@ -31,6 +31,11 @@ public class TimeManager : MonoBehaviour
         {
             dayLight.intensity = 0.2f;
         }
+
+        if(tiempo > valHora * 2.7 && tiempo < valHora * 2.75)
+        {
+            CamaController.talkMom();
+        }
         if(tiempo > valHora * 3)
         {
             SceneManager.LoadScene(nextScene);

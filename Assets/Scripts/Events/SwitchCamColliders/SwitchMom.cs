@@ -16,7 +16,7 @@ public class SwitchMom : MonoBehaviour
         MomCam.enabled = false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         BroCam.enabled = false;
         MainCam.enabled = false;
