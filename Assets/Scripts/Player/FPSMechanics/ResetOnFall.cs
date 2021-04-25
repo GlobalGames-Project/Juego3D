@@ -5,7 +5,10 @@ using UnityEngine;
 public class ResetOnFall : MonoBehaviour
 {
     public GameObject mom;
+    private int motherSpawned = 0;
+
     private void OnTriggerEnter(Collider other)
+
     {
         if (other.tag == "FallHitbox")
         {
@@ -21,6 +24,12 @@ public class ResetOnFall : MonoBehaviour
         if (other.tag == "MomStartChasing")
         {
             mom.SetActive(true);
+            if (motherSpawned == 0)
+            {
+                SoundManagerScript.PlaySound("momSpawn");
+
+            }
+            motherSpawned = 1;
         }
     }
 }

@@ -86,6 +86,7 @@ public class GunEnemyScript : MonoBehaviour
             rb.AddForce(transform.forward * 26f, ForceMode.Impulse);
             rb.AddForce(transform.up * 5f, ForceMode.Impulse);
             ///End of attack code
+            SoundManagerScript.PlaySound("enemyShot");
 
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);

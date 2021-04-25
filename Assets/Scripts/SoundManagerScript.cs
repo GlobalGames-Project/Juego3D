@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour
 {
-    //public static AudioClip gunShot;
+    public static AudioClip momSpawn;
+    public static AudioClip enemyShot;
 
 
     static AudioSource audioSrc;
@@ -12,8 +13,9 @@ public class SoundManagerScript : MonoBehaviour
 
     void Start()
     {
-        //gunShot = Resources.Load<AudioClip>("playerShot");
-    
+        momSpawn = Resources.Load<AudioClip>("momSpawn");
+        enemyShot = Resources.Load<AudioClip>("enemyShot");
+
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -28,9 +30,12 @@ public class SoundManagerScript : MonoBehaviour
     {
         switch (clip)
         {
- //           case "playerShot":
- //               audioSrc.PlayOneShot(gunShot);
- //               break;
+            case "momSpawn":
+                audioSrc.PlayOneShot(momSpawn);
+                break;
+            case "enemyShot":
+                audioSrc.PlayOneShot(enemyShot);
+                break;
         }
     }
 

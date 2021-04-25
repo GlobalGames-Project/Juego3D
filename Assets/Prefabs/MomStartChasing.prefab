@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6896967905234513492
+--- !u!1 &5951737200137118003
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6896967905234513494}
-  - component: {fileID: 6896967905234513495}
-  - component: {fileID: 6896967905234513489}
+  - component: {fileID: 5951737200137118001}
+  - component: {fileID: 5951737200137118000}
+  - component: {fileID: 5951737200137118006}
   m_Layer: 0
   m_Name: MomStartChasing
   m_TagString: MomStartChasing
@@ -18,40 +18,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6896967905234513494
+--- !u!4 &5951737200137118001
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896967905234513492}
+  m_GameObject: {fileID: 5951737200137118003}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 87.89, y: 72.79, z: 15.81}
+  m_LocalPosition: {x: -254.25392, y: 27.168623, z: 17}
   m_LocalScale: {x: 53.43983, y: 36.38881, z: 1.652846}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6896967905234513495
+--- !u!65 &5951737200137118000
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896967905234513492}
+  m_GameObject: {fileID: 5951737200137118003}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &6896967905234513489
+--- !u!54 &5951737200137118006
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6896967905234513492}
+  m_GameObject: {fileID: 5951737200137118003}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
