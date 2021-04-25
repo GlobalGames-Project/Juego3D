@@ -46,6 +46,7 @@ public class TextShow : MonoBehaviour
     IEnumerator mostrarDialogo(int valor, float time = 0.1f)
     {
         dialoguePanel.SetActive(true);
+        EventGenerator.current.DialogueGoing();
         string[] dialogo;
         switch (valor)
         {
@@ -112,6 +113,7 @@ public class TextShow : MonoBehaviour
     public void CerrarDialogo()
     {
         isDialogoActive = false;
+        EventGenerator.current.DialogueFinish();
         if(auxCorutine != null)
         {
             Debug.Log("Deteniendolo");
