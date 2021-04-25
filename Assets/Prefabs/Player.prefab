@@ -192,7 +192,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 5109574387077505936, guid: cc192c1f0bdb15e4a89ef300b09b1a9d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -355,6 +355,8 @@ MonoBehaviour:
   speed: 10
   jumpForce: 10
   slideForce: 400
+  isGrounded: 0
+  isSprinting: 0
 --- !u!33 &7174548298278352749
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -449,8 +451,6 @@ MonoBehaviour:
     moveSpeed: 4500
     counterMovement: 0.175
     slideCounterMovement: 0
-    isWallRight: 0
-    isWallLeft: 0
     wallrunForce: 100
     maxWallSpeed: 20
     climbForce: 100000
