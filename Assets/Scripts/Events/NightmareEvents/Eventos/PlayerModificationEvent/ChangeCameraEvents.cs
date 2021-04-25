@@ -7,15 +7,23 @@ public class ChangeCameraEvents : NightmareEvento
 {
 
     public PostProcessProfile camera;
-    public GameObject player;
+    public GameObject cameraObject;
 
     public override void EventoAction()
     {
-        player.GetComponent<PostProcessVolume>().profile = camera;
+        PostProcessProfile[] cameraList = cameraObject.GetComponent<CameraListSettings>().camera.profiles;
+        int i = cameraList.Length;
+        Debug.Log(i);
+        int range = Random.Range(0, i);
+        Debug.Log(range);
+        camera = cameraList[range];
+        if (camera != null) {
+            cameraObject.GetComponent<PostProcessVolume>().profile = camera;
+        }
+        Debug.Log(camera.name);
     }
 
-    public void init(GameObject player, PostProcessProfile camera) {
-        this.player = player;
-        this.camera = camera;
+    public void init(GameObject cameraObject) {
+        this.cameraObject = cameraObject;
     }
 }
