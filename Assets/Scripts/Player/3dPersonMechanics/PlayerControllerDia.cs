@@ -6,6 +6,7 @@ using System;
 
 public class PlayerControllerDia : MonoBehaviour
 {
+    public Animator anim;
     public CharacterController controller;
     public float speed = 5f;
     public float gravity = -19.81f;
@@ -19,6 +20,7 @@ public class PlayerControllerDia : MonoBehaviour
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController>();
         EventGenerator.current.onDialogueGoing += hablando;
         EventGenerator.current.onDialogueFinish += dejarHablar;
@@ -26,6 +28,43 @@ public class PlayerControllerDia : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKey("w"))
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else if (Input.GetKey("a"))
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else if (Input.GetKey("s"))
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else if (Input.GetKey("d"))
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else if(Input.GetKey("up"))
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else if (Input.GetKey("left"))
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else if (Input.GetKey("down"))
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else if (Input.GetKey("right"))
+        {
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
+        
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
@@ -61,6 +100,8 @@ public class PlayerControllerDia : MonoBehaviour
     private void hablando()
     {
         speed = 0f;
+        anim.SetBool("isWalking", false);
+
     }
 
     private void dejarHablar()
