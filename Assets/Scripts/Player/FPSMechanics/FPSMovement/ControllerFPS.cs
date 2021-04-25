@@ -24,6 +24,9 @@ public class ControllerFPS : MonoBehaviour
 
     void Start()
     {
+        PlayerEvents evento = NightmareEventosEnum.eventos[2];
+        evento.Init(this.gameObject.transform.GetChild(1).gameObject);
+        evento.EventoAction();
         movemenet = new PlayerMovementFPS(this.gameObject, suelo, pared, climb);
         camera = new CameraMovement(this.gameObject, this.transform.GetChild(1).GetComponent<Camera>());
     }

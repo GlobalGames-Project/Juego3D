@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-public class ChangeCameraEvents : NightmareEvento
+public class ChangeCameraEvents : PlayerEvents
 {
 
     public PostProcessProfile camera;
@@ -23,7 +23,7 @@ public class ChangeCameraEvents : NightmareEvento
         Debug.Log(camera.name);
     }
 
-    public void init(GameObject cameraObject) {
+    public override void Init(GameObject cameraObject) {
         this.cameraObject = cameraObject;
     }
 }
