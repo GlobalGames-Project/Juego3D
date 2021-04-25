@@ -38,7 +38,7 @@ public class TimeManager : MonoBehaviour
         }
         if(tiempo > valHora * 3)
         {
-            SceneManager.LoadScene(nextScene);
+            DiaGameManager.changeScene(nextScene);
         }
     }
 
