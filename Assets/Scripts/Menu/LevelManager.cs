@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DiaGameManager : MonoBehaviour
+public class LevelManager : MonoBehaviour
 {
-    public static EventObject eventObject;
     // Start is called before the first frame update
     void Start()
     {
-         eventObject = new EventObject();
+        
     }
 
     // Update is called once per frame
@@ -18,8 +17,14 @@ public class DiaGameManager : MonoBehaviour
         
     }
 
-    public static void changeScene(string sceneName)
+    public void cargarNivel(string nombreNivel)
     {
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(nombreNivel);
     }
+
+    public void cerrarJuego()
+    {
+        Application.Quit();
+    }
+
 }
