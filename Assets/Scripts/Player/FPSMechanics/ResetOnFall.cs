@@ -26,7 +26,9 @@ public class ResetOnFall : MonoBehaviour
             mom.SetActive(true);
             if (motherSpawned == 0)
             {
+
                 SoundManagerScript.PlaySound("momSpawn");
+                GameManagerScript.momSpawned = 1;
 
             }
             motherSpawned = 1;

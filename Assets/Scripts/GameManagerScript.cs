@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public GameObject heart1, heart2, heart3, gameOver, blackScreen;
-    public static int health;
+    public GameObject heart1, heart2, heart3, gameOver, blackScreen, momAwaken;
+    public static int health, momSpawned;
     public int whereToRespawn;
 
     // Start is called before the first frame update
@@ -18,6 +18,7 @@ public class GameManagerScript : MonoBehaviour
         heart3.gameObject.SetActive(true);
         gameOver.gameObject.SetActive(false);
         blackScreen.gameObject.SetActive(false);
+        momAwaken.gameObject.SetActive(false);
 
 
 
@@ -44,6 +45,7 @@ public class GameManagerScript : MonoBehaviour
                 heart3.gameObject.SetActive(true);
                 break;
             case 2:
+                
                 heart1.gameObject.SetActive(true);
                 heart2.gameObject.SetActive(true);
                 heart3.gameObject.SetActive(false);
@@ -85,7 +87,19 @@ public class GameManagerScript : MonoBehaviour
 
         }
 
+        if (momSpawned == 1)
+        {
+            StartCoroutine(Test());
+        }
 
+        IEnumerator Test()
+        {
+            momAwaken.SetActive(true);
+            yield return new WaitForSeconds(5);
+            momAwaken.SetActive(false);
+            momSpawned = 0;
+
+        }
     }
 
 }
