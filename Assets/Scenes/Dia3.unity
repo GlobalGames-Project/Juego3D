@@ -14765,6 +14765,11 @@ PrefabInstance:
       propertyPath: jugador
       value: 
       objectReference: {fileID: 7268068987674816535}
+    - target: {fileID: 6935910849987669446, guid: eef6c20c85b3fe04d944455af9d964b9,
+        type: 3}
+      propertyPath: spawn.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eef6c20c85b3fe04d944455af9d964b9, type: 3}
 --- !u!23 &3535666355483741408
@@ -17512,6 +17517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba7b066b71e2af4186b363cd2c57629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   controller: {fileID: 7268068987674816537}
   speed: 5
   gravity: -19.81
