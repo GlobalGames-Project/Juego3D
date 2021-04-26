@@ -4672,6 +4672,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 843350102, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1352660595085295983, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_Name
@@ -13360,7 +13364,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoPC.Array.data[6]
-      value: 5min latter
+      value: 5 min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13405,7 +13409,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoTv.Array.data[5]
-      value: "Cuatro: \"Hoy ha venido a divertirse MIGUEK BOS\xC9\""
+      value: "Cuatro: \"Hoy ha venido a divertirse MIGUEL BOS\xC9\""
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13440,7 +13444,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoPC.Array.data[11]
-      value: 18min latter
+      value: 18 min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13615,7 +13619,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoEscoba.Array.data[4]
-      value: 5min later
+      value: 5 min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13675,7 +13679,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoBorracho.Array.data[0]
-      value: Hey I found a lost bottle from my last drunkenness
+      value: Hey I found a lost bottle from my last session
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13690,7 +13694,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoBorracho.Array.data[3]
-      value: I will try it, let's see if it's still drunkable
+      value: I will try it, let's see if it's still drinkable
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13805,7 +13809,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoEstudiar.Array.data[16]
-      value: Well, I love it! Iliterally made perfectly
+      value: Well, I love it! Iiterally made perfectly
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4477768, g: 0.49775535, b: 0.57542145, a: 1}
+  m_IndirectSpecularColor: {r: 0.44777644, g: 0.4977551, b: 0.5754208, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13181,7 +13181,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoPC.Array.data[2]
-      value: 25min later
+      value: 25 min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13201,7 +13201,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoPC.Array.data[6]
-      value: 5min latter
+      value: 5 min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13216,7 +13216,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoPC.Array.data[9]
-      value: 15min latter
+      value: 15 min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13281,7 +13281,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoPC.Array.data[11]
-      value: 18min latter
+      value: 18 min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13306,7 +13306,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoBath.Array.data[0]
-      value: I need to go to the bath
+      value: I need to go to the bathroom
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13351,12 +13351,12 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoLibro.Array.data[0]
-      value: I should do something while being here closed
+      value: I should do something while being closed in here
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoLibro.Array.data[1]
-      value: I know, I will read that abandoned book
+      value: I know, I will read that book I abandoned
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13376,7 +13376,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoLibro.Array.data[5]
-      value: 10min later
+      value: 10 min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13446,7 +13446,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoEscoba.Array.data[2]
-      value: At least pass the broom
+      value: At least pass a broom
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13456,7 +13456,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoEscoba.Array.data[4]
-      value: 5min later
+      value: 5 min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13516,7 +13516,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoBorracho.Array.data[0]
-      value: Hey I found a lost bottle from my last drunkenness
+      value: Hey I found a lost bottle from my last session
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13531,7 +13531,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoBorracho.Array.data[3]
-      value: I will try it, let's see if it's still drunkable
+      value: I will try it, let's see if it's still drinkable
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13556,7 +13556,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoBorracho.Array.data[8]
-      value: Fuck my head!! It hurts a lot...
+      value: "Fuck, my head!! It seriously hurts\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13576,7 +13576,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoEstudiar.Array.data[2]
-      value: when I will be back...
+      value: when I'll be back...
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13646,7 +13646,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoEstudiar.Array.data[16]
-      value: Well, I love it! Iliterally made perfectly
+      value: Well, I love it! Literally perfectly made
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13711,7 +13711,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoSillaGolpe.Array.data[4]
-      value: This pain will stay for at least tomorrow...
+      value: "This pain will stay till at least tomorrow\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13796,7 +13796,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoAcariciarGato.Array.data[4]
-      value: You never leave me alone
+      value: You never abandon me
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13821,7 +13821,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoLlorarHermano.Array.data[2]
-      value: Why you left me alone?
+      value: Why did you leave me alone?
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -14001,7 +14001,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoArmarioVomitar.Array.data[4]
-      value: Fuck I will throw up...
+      value: Fuck I'm going to throw up...
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -14016,7 +14016,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoArmarioVomitar.Array.data[7]
-      value: I should clean this...
+      value: I should clean this up...
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -14026,7 +14026,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoMadreNegativo.Array.data[11]
-      value: YOU ONLY THOUGHT ABOUT YOU
+      value: YOU ONLY THOUGHT ABOUT YOURSELVES
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -14096,7 +14096,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoMesaHabitacion.Array.data[2]
-      value: I still have an unnopened Red Bull can
+      value: I still have an unopened can of Red Bull
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}

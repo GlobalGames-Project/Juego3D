@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-public class ChangeCameraEvents : NightmareEvento
+public class ChangeCameraEvents : PlayerEvents
 {
 
-    public PostProcessProfile camera;
+    public PostProcessProfile[] camera;
     public GameObject player;
 
     public override void EventoAction()
     {
-        player.GetComponent<PostProcessVolume>().profile = camera;
+        camera = player.transform.GetChild(1).GetComponent<CameraList>().cameras.profiles;
+
+        int random = Random.Range(0, camera.Length);
+
+        player.transform.GetChild(1).GetComponent<PostProcessVolume>().profile = camera[random];
     }
 
-    public void init(GameObject player, PostProcessProfile camera) {
+    public override void Init(GameObject player) {
         this.player = player;
-        this.camera = camera;
     }
 }

@@ -24,6 +24,9 @@ public class ControllerFPS : MonoBehaviour
 
     void Start()
     {
+        ChangeCameraEvents cameraevent = ScriptableObject.CreateInstance<ChangeCameraEvents>();
+        cameraevent.Init(this.gameObject);
+        cameraevent.EventoAction();
         movemenet = new PlayerMovementFPS(this.gameObject, suelo, pared, climb);
         camera = new CameraMovement(this.gameObject, this.transform.GetChild(1).GetComponent<Camera>());
     }

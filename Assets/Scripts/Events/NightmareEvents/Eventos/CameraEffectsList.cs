@@ -6,5 +6,5 @@ using UnityEngine.Rendering.PostProcessing;
 [CreateAssetMenu(menuName = "CameraProfile List")]
 public class CameraEffectsList : ScriptableObject
 {
-    public List<PostProcessProfile> profiles;
+    public PostProcessProfile[] profiles;
 }

@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class CatRoomController : MonoBehaviour
 {
     int idDialogo = (int)EnumDialogosId.dialogoAcariciarGato; // id para los dialogos
-    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoGato; // id para eventos    
+    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoVaMasLento; // id para eventos    
     public bool isActive = true;
     public GameObject light;
     public NavMeshAgent agent;

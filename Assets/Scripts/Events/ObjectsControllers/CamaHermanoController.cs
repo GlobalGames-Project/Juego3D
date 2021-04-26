@@ -5,7 +5,7 @@ using UnityEngine;
 public class CamaHermanoController : MonoBehaviour
 {
     int idDialogo = (int)EnumDialogosId.dialogoLlorarHermano; // id para los dialogos
-    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoCaenGotas; // id para eventos    
+    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoCamara; // id para eventos    
     public bool isActive = true;
     public GameObject light;
 
