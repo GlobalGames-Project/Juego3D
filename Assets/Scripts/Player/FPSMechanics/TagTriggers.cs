@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TagTriggers : MonoBehaviour
 {
@@ -10,10 +11,11 @@ public class TagTriggers : MonoBehaviour
     private void OnTriggerEnter(Collider other)
 
     {
-        if (other.tag == "FallHitbox")
+        if (other.tag == "FallHitbox1")
         {
-            GameManagerScript.health--;
-            transform.position = new Vector3(82, 69, 38);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            GameManagerScript.health = 0;
+
         }
 
         if (other.tag == "Mom")
@@ -33,7 +35,7 @@ public class TagTriggers : MonoBehaviour
             }
             motherSpawned = 1;
         }
-        if (other.tag == "EndingCheckpoint")
+        if (other.tag == "EndingCheckpoint1")
         {
             GameManagerScript.ending1 = 1;
 
