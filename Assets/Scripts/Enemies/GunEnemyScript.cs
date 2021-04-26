@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class GunEnemyScript : MonoBehaviour
 {
     public NavMeshAgent agent;
-
+    public Animator anim;
     public Transform player;
     public GameObject projectile;
 
@@ -27,6 +27,11 @@ public class GunEnemyScript : MonoBehaviour
     public float sightRange, attackRange;
     public bool playerInSightRange, playerInAttackRange;
 
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     private void Awake()
     {
         player = GameObject.Find("Orientation").transform;
@@ -35,10 +40,18 @@ public class GunEnemyScript : MonoBehaviour
 
     private void Update()
     {
+        if (playerInAttackRange == true)
+        {
+            anim.SetBool("isShooting", true);
+        }
+        else
+        {
+            anim.SetBool("isShooting", false);
+        }
+
         //Check for sight and attack range
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
 
         if (!playerInSightRange && !playerInAttackRange) Patroling();
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();

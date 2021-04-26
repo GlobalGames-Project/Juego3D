@@ -3,27 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
-public class ChangeCameraEvents : PlayerEvents
+public class ChangeCameraEvents : NightmareEvento
 {
 
     public PostProcessProfile camera;
-    public GameObject cameraObject;
+    public GameObject player;
 
     public override void EventoAction()
     {
-        PostProcessProfile[] cameraList = cameraObject.GetComponent<CameraListSettings>().camera.profiles;
-        int i = cameraList.Length;
-        Debug.Log(i);
-        int range = Random.Range(0, i);
-        Debug.Log(range);
-        camera = cameraList[range];
-        if (camera != null) {
-            cameraObject.GetComponent<PostProcessVolume>().profile = camera;
-        }
-        Debug.Log(camera.name);
+        player.GetComponent<PostProcessVolume>().profile = camera;
     }
 
-    public override void Init(GameObject cameraObject) {
-        this.cameraObject = cameraObject;
+    public void init(GameObject player, PostProcessProfile camera) {
+        this.player = player;
+        this.camera = camera;
     }
 }

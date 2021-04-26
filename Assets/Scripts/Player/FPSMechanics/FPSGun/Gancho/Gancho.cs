@@ -5,17 +5,17 @@ using UnityEngine;
 public class Gancho {
     private LineRenderer lr;
     private Vector3 grapplePoint;
-    public LayerMask playerMask;
+    public LayerMask enemyGrapple;
     public Transform gunTip, cam, player;
     private float maxDistance = 70f;
     private SpringJoint joint;
     public float spring = 18f, damper = 7f, massScale = 4.5f;
 
-    public Gancho(Transform gunTip, Transform cam, Transform player, LayerMask playerMask) {
+    public Gancho(Transform gunTip, Transform cam, Transform player, LayerMask enemyGrapple) {
         this.gunTip = gunTip.GetChild(0).transform;
         this.cam = cam;
         this.player = player;
-        this.playerMask = playerMask;
+        this.enemyGrapple = enemyGrapple;
         lr = gunTip.GetComponent<LineRenderer>();
     }
 
@@ -25,7 +25,7 @@ public class Gancho {
     public void StartGrapple()
     {
         RaycastHit hit;
-        if (Physics.Raycast(cam.position, cam.forward, out hit, maxDistance, playerMask)) { }
+        if (Physics.Raycast(cam.position, cam.forward, out hit, maxDistance, enemyGrapple)) { }
 
          else if (Physics.Raycast(cam.position, cam.forward, out hit, maxDistance))
         {
