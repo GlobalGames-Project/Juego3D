@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 7491326635246880367}
+  anim: {fileID: 0}
   player: {fileID: 0}
   projectile: {fileID: 1743608967567622369, guid: 4b5abd1abe87aa04f88846ac968db7c3,
     type: 3}

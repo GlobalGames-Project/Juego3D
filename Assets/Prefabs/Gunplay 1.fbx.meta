@@ -8,18 +8,24 @@ ModelImporter:
     second: Shooting
   - first:
       74: -203655887218126122
+    second: shooting
+  - first:
+      74: -203655887218126122
     second: mixamo.com
+  - first:
+      74: 2451273066817259898
+    second: shooting
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ch25_Body
-    second: {fileID: 2100000, guid: ce0dbea4efc40564490a237ccf71c58f, type: 2}
+    second: {fileID: 2100000, guid: 4d56e4cc52b88cb4eabb21afd70ace92, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ch25_body1
-    second: {fileID: 2100000, guid: 4eb365409cc1e3b4b9b26c1ff3b9b918, type: 2}
+    second: {fileID: 2100000, guid: 4d56e4cc52b88cb4eabb21afd70ace92, type: 2}
   materials:
     materialImportMode: 1
     materialName: 1
@@ -48,36 +54,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Shooting
-      takeName: Take 001
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 272
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: mixamo.com
+      name: shooting
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
@@ -88,9 +65,9 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
