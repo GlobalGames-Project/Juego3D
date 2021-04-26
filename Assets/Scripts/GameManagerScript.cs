@@ -5,21 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public GameObject heart1, heart2, heart3, gameOver, blackScreen, momAwaken;
-    public static int health, momSpawned;
+    public GameObject heart1, heart2, heart3, gameOver, blackScreen, momAwaken, ending1Text;
+    public static int health, momSpawned, ending1;
     public int whereToRespawn;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 3;
+
+        momSpawned = 0;
+        ending1 = 0;
+
         heart1.gameObject.SetActive(true);
         heart2.gameObject.SetActive(true);
         heart3.gameObject.SetActive(true);
         gameOver.gameObject.SetActive(false);
         blackScreen.gameObject.SetActive(false);
         momAwaken.gameObject.SetActive(false);
-
+        ending1Text.gameObject.SetActive(false);
 
 
     }
@@ -45,7 +49,7 @@ public class GameManagerScript : MonoBehaviour
                 heart3.gameObject.SetActive(true);
                 break;
             case 2:
-                
+
                 heart1.gameObject.SetActive(true);
                 heart2.gameObject.SetActive(true);
                 heart3.gameObject.SetActive(false);
@@ -89,17 +93,35 @@ public class GameManagerScript : MonoBehaviour
 
         if (momSpawned == 1)
         {
-            StartCoroutine(Test());
+            StartCoroutine(MomSpawnedText());
         }
 
-        IEnumerator Test()
+        if (ending1 == 1)
+        {
+            Debug.Log("ending1 coroutine");
+            StartCoroutine(Ending1Text());
+        }
+
+        IEnumerator MomSpawnedText()
         {
             momAwaken.SetActive(true);
             yield return new WaitForSeconds(5);
             momAwaken.SetActive(false);
             momSpawned = 0;
+        }
+
+        IEnumerator Ending1Text()
+        {
+            ending1Text.SetActive(true);
+            blackScreen.SetActive(true);
+            yield return new WaitForSeconds(10);
+            ending1Text.SetActive(false);
+            blackScreen.SetActive(false);
+            ending1 = 0;
+           // SceneManager.LoadScene("Dia 2");
 
         }
     }
-
 }
+
+

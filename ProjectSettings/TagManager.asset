@@ -14,6 +14,8 @@ TagManager:
   - FinalMomCheckpoint
   - MomStartChasing
   - Enemy
+  - EndingCheckpoint
+  - cosa
   layers:
   - Default
   - TransparentFX
@@ -29,7 +31,7 @@ TagManager:
   - Escalera
   - Player
   - Bullet
-  - 
+  - Mom
   - 
   - 
   - 

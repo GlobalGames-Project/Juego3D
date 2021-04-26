@@ -33,7 +33,6 @@ public class MotherMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "MomCheckpoint")
         {
-            Debug.Log("He tocado momcheckpoint");
             Vector3 pos = transform.position;
 
             transform.Rotate(0, 90, 0);
