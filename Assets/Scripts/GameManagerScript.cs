@@ -8,6 +8,7 @@ public class GameManagerScript : MonoBehaviour
     public GameObject heart1, heart2, heart3, gameOver, blackScreen, momAwaken, ending1Text, ending2Text, ending3Text;
     public static int health, momSpawned, ending1, ending2, ending3;
     public int whereToRespawn;
+    int whereAmI;
 
     // Start is called before the first frame update
     void Start()
@@ -76,7 +77,7 @@ public class GameManagerScript : MonoBehaviour
                 if (Input.GetKey(KeyCode.R))
                 {
                     Time.timeScale = 1;
-                    UnityEngine.SceneManagement.SceneManager.LoadScene(whereToRespawn);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                     //Devolver sonido
                 }
                 break;
@@ -85,7 +86,7 @@ public class GameManagerScript : MonoBehaviour
                 if (Input.GetKey(KeyCode.R))
                 {
                     Time.timeScale = 1;
-                    SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                     // UnityEngine.SceneManagement.SceneManager.LoadScene(whereToRespawn);
                     //Devolver sonido
                 }
