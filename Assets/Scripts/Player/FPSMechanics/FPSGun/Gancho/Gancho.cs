@@ -9,6 +9,7 @@ public class Gancho {
     public Transform gunTip, cam, player;
     private float maxDistance = 70f;
     private SpringJoint joint;
+    public bool isGrapling;
     public float spring = 18f, damper = 7f, massScale = 4.5f;
 
     public Gancho(Transform gunTip, Transform cam, Transform player, LayerMask enemyGrapple) {
@@ -25,10 +26,11 @@ public class Gancho {
     public void StartGrapple()
     {
         RaycastHit hit;
-        if (Physics.Raycast(cam.position, cam.forward, out hit, maxDistance, enemyGrapple)) { }
+        if (Physics.Raycast(cam.position, cam.forward, out hit, maxDistance, enemyGrapple)) { isGrapling = false; }
 
          else if (Physics.Raycast(cam.position, cam.forward, out hit, maxDistance))
         {
+            isGrapling = true;
             grapplePoint = hit.point;
             joint = player.gameObject.AddComponent<SpringJoint>();
             joint.autoConfigureConnectedAnchor = false;
@@ -47,7 +49,7 @@ public class Gancho {
 
             lr.positionCount = 2;
             currentGrapplePosition = gunTip.position;
-        }
+        } else { isGrapling = false; }
     }
 
     public void StopGrapple()

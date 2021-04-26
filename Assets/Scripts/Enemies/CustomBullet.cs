@@ -110,5 +110,11 @@ public class CustomBullet : MonoBehaviour
             Debug.Log("Triggered by Enemy");
             GameManagerScript.health--;
         }
+
+        if (other.tag == "Player")
+        {
+            Debug.Log("Triggered by Enemy");
+            GameManagerScript.health--;
+        }
     }
 }
