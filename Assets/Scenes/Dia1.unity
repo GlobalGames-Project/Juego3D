@@ -13164,7 +13164,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoPC.Array.data[2]
-      value: 25min latter
+      value: 25min later
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13229,7 +13229,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoTv.Array.data[5]
-      value: "Cuatro: \"Hoy ha venido a divertirse MIGUEK BOS\xC9\""
+      value: "Cuatro: \"Hoy ha venido a divertirse MIGUEL BOS\xC9\""
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13294,7 +13294,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoBath.Array.data[1]
-      value: I have Michael Jordan hanging of the hoop...
+      value: I have Michael Jordan hanging off the hoop...
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13409,7 +13409,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoMadre.Array.data[5]
-      value: just hit me up.
+      value: just hit me up
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13464,7 +13464,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoWindow.Array.data[2]
-      value: I miss the fresh air...
+      value: I miss fresh air...
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13504,7 +13504,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoBorracho.Array.data[1]
-      value: Snif
+      value: '"Snif"'
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13609,7 +13609,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoEstudiar.Array.data[12]
-      value: At least is the more interesting to do
+      value: At least is the most interesting to do
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13619,7 +13619,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoEstudiar.Array.data[14]
-      value: I will improve my  Guitar Hero Prototype
+      value: I will improve my Guitar Hero Prototype
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13759,7 +13759,7 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoAcariciarGato.Array.data[0]
-      value: Ps ps ps ps
+      value: '"Ps ps ps ps"'
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -13989,12 +13989,12 @@ PrefabInstance:
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoArmarioVomitar.Array.data[5]
-      value: ahhhh
+      value: AAAAHHHH
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
       propertyPath: dialogoArmarioVomitar.Array.data[6]
-      value: Uaaagg
+      value: '"Uaaagg"'
       objectReference: {fileID: 0}
     - target: {fileID: 2961210578269829520, guid: 4932f3caa9c14b04a967fe4e0a8e8c9e,
         type: 3}
@@ -17361,6 +17361,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 1
   light: {fileID: 872752075}
+  agent: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  walkPoint: {x: 0, y: 0, z: 0}
+  walkPointRange: 0
 --- !u!1 &7046665407377120401
 GameObject:
   m_ObjectHideFlags: 0
@@ -18420,6 +18426,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personatge
       objectReference: {fileID: 0}
+    - target: {fileID: 5868120620713431819, guid: c21813cabc705a3478536911ed71b8fb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.37
+      objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_RootOrder
@@ -18428,52 +18439,52 @@ PrefabInstance:
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.54
+      value: -10.13
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.111
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.743
+      value: 22.24
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.00000029802322
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.00000029802322
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 89.99999
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 89.99999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
