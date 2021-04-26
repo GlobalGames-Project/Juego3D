@@ -5,21 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject canvasOcultar;
+    public GameObject canvasMostrar;
+    float tiempo = 0;
+    bool start = false;
+    string nombreNivel;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
+        if (start)
+        {
+            tiempo += Time.deltaTime;
+        }
 
-    public void cargarNivel(string nombreNivel)
+        if (tiempo > 10)
+        {
+            SceneManager.LoadScene(nombreNivel);
+        }
+    }
+    public void cargarNivel(string pnombreNivel)
     {
-        SceneManager.LoadScene(nombreNivel);
+        canvasOcultar.SetActive(false);
+        canvasMostrar.SetActive(true);
+        start = true;
+        nombreNivel = pnombreNivel;
     }
 
     public void cerrarJuego()
