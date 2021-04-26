@@ -7,42 +7,19 @@ public class NightmareEventosEnum
 
     public enum EventosEnum
     {
-        eventoDisparoRafaga,
-        eventoDisparoRacimo,
         eventoNoPuedeCaminar,
-        eventoMasVida,
         eventoCamara,
-        eventoGato,
-        eventoMenosVida,
-        eventoCaenGotas,
-        eventoConsejo,
         eventoSaltasMas,
-        eventoElSueloResvala,
         eventoVaMasLento,
-        eventoDisparoAutomatico,
-        eventoPadreVaMasLento,
-        evenoCAenLibros,
 
         size
     }
 
-    public NightmareEvento[] eventos = {
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+    public static PlayerEvents[] eventos = {
+        ScriptableObject.CreateInstance<OnlyCanRun>(),
+        ScriptableObject.CreateInstance<ChangeCameraEvents>(),
+        ScriptableObject.CreateInstance<MoreJumpForce>(),
+        ScriptableObject.CreateInstance<LessVelocity>(),
     };
 }
 
