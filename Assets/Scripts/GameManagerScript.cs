@@ -130,7 +130,7 @@ public class GameManagerScript : MonoBehaviour
             ending1Text.SetActive(false);
             blackScreen.SetActive(false);
             ending1 = 0;
-           // SceneManager.LoadScene("Dia2");
+            SceneManager.LoadScene("Dia2");
 
         }
 
@@ -142,7 +142,7 @@ public class GameManagerScript : MonoBehaviour
             ending2Text.SetActive(false);
             blackScreen.SetActive(false);
             ending2 = 0;
-            // SceneManager.LoadScene("Dia3");
+            SceneManager.LoadScene("Dia3");
 
         }
 
@@ -154,7 +154,7 @@ public class GameManagerScript : MonoBehaviour
             ending3Text.SetActive(false);
             blackScreen.SetActive(false);
             ending3 = 0;
-            // SceneManager.LoadScene("Dia4");
+            SceneManager.LoadScene("Dia4");
 
         }
     }

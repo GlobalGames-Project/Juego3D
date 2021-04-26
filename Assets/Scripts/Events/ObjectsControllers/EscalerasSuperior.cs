@@ -12,8 +12,10 @@ public class EscalerasSuperior : MonoBehaviour
         {
             Debug.Log("Escaleras");
         }
-        
-        other.gameObject.transform.position = spawn;
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.transform.position = spawn;
+        }
         
     }
 }

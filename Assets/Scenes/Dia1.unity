@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44777644, g: 0.4977551, b: 0.5754208, a: 1}
+  m_IndirectSpecularColor: {r: 0.4477768, g: 0.49775535, b: 0.57542145, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1502,6 +1502,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimeManager
       objectReference: {fileID: 0}
+    - target: {fileID: 836298936299230685, guid: 2f9fb4cacb5edc64291f3226a4630b33,
+        type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 1075544017}
     - target: {fileID: 836298936299230685, guid: 2f9fb4cacb5edc64291f3226a4630b33,
         type: 3}
       propertyPath: valHora
@@ -5216,6 +5221,12 @@ Transform:
   m_Father: {fileID: 8931917748548909298}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1075544017 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 64187841, guid: c21813cabc705a3478536911ed71b8fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 8509766555580084600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1096219229
 GameObject:
   m_ObjectHideFlags: 0
@@ -18432,15 +18443,78 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_Pivot.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 337.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 56.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.00068206806
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -123.67796
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187842, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 136.35066
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187843, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_Text
+      value: Press Space to interact with glowing objects
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187843, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187843, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187843, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 64187843, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 843350102, guid: c21813cabc705a3478536911ed71b8fb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1352660595085295983, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}
       propertyPath: m_Name
       value: Personatge
-      objectReference: {fileID: 0}
-    - target: {fileID: 5868120620713431819, guid: c21813cabc705a3478536911ed71b8fb,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.37
       objectReference: {fileID: 0}
     - target: {fileID: 6442936182058235028, guid: c21813cabc705a3478536911ed71b8fb,
         type: 3}

@@ -12,9 +12,11 @@ public class TimeManager : MonoBehaviour
     // Start is called before the first frame update
     public string nextScene;
     public Light dayLight;
+    public GameObject texto;
+
     void Start()
     {
-        
+        tiempo = 0.0f;
     }
 
     // Update is called once per frame
@@ -25,6 +27,7 @@ public class TimeManager : MonoBehaviour
         {
             horario++;
             EventGenerator.current.MamaTimeEnter();
+            
         }
         
         if(tiempo > valHora * 2.7)
