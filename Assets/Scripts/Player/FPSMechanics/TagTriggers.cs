@@ -40,5 +40,10 @@ public class TagTriggers : MonoBehaviour
             GameManagerScript.ending1 = 1;
 
         }
+        if (other.tag == "EndingCheckpoint2")
+        {
+            GameManagerScript.ending2 = 1;
+
+        }
     }
 }

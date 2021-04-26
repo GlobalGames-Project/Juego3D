@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public GameObject heart1, heart2, heart3, gameOver, blackScreen, momAwaken, ending1Text;
-    public static int health, momSpawned, ending1;
+    public GameObject heart1, heart2, heart3, gameOver, blackScreen, momAwaken, ending1Text, ending2Text, ending3Text;
+    public static int health, momSpawned, ending1, ending2, ending3;
     public int whereToRespawn;
 
     // Start is called before the first frame update
@@ -16,6 +16,8 @@ public class GameManagerScript : MonoBehaviour
 
         momSpawned = 0;
         ending1 = 0;
+        ending2 = 0;
+        ending3 = 0;
 
         heart1.gameObject.SetActive(true);
         heart2.gameObject.SetActive(true);
@@ -24,6 +26,8 @@ public class GameManagerScript : MonoBehaviour
         blackScreen.gameObject.SetActive(false);
         momAwaken.gameObject.SetActive(false);
         ending1Text.gameObject.SetActive(false);
+        ending2Text.gameObject.SetActive(false);
+        ending3Text.gameObject.SetActive(false);
 
 
     }
@@ -98,8 +102,16 @@ public class GameManagerScript : MonoBehaviour
 
         if (ending1 == 1)
         {
-            Debug.Log("ending1 coroutine");
             StartCoroutine(Ending1Text());
+        }
+
+        if (ending2 == 1)
+        {
+            StartCoroutine(Ending2Text());
+        }
+        if (ending3 == 1)
+        {
+            StartCoroutine(Ending3Text());
         }
 
         IEnumerator MomSpawnedText()
@@ -119,6 +131,30 @@ public class GameManagerScript : MonoBehaviour
             blackScreen.SetActive(false);
             ending1 = 0;
            // SceneManager.LoadScene("Dia 2");
+
+        }
+
+        IEnumerator Ending2Text()
+        {
+            ending2Text.SetActive(true);
+            blackScreen.SetActive(true);
+            yield return new WaitForSeconds(10);
+            ending2Text.SetActive(false);
+            blackScreen.SetActive(false);
+            ending2 = 0;
+            // SceneManager.LoadScene("Dia 3");
+
+        }
+
+        IEnumerator Ending3Text()
+        {
+            ending3Text.SetActive(true);
+            blackScreen.SetActive(true);
+            yield return new WaitForSeconds(10);
+            ending3Text.SetActive(false);
+            blackScreen.SetActive(false);
+            ending2 = 0;
+            // SceneManager.LoadScene("Dia 4");
 
         }
     }

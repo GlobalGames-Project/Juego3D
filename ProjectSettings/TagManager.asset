@@ -15,6 +15,7 @@ TagManager:
   - Enemy
   - EndingCheckpoint1
   - FallHitbox1
+  - EndingCheckpoint2
   layers:
   - Default
   - TransparentFX
