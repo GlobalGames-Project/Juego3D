@@ -6,7 +6,7 @@ public class WindowController : MonoBehaviour
 {
 
      int idDialogo = (int)EnumDialogosId.dialogoAbrirVentana ; // id para los dialogos
-    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoMasVida; // id para eventos
+    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoSaltasMas; // id para eventos
     public bool isActive = true;
     public GameObject light;
 

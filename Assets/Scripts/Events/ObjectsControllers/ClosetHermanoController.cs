@@ -5,7 +5,7 @@ using UnityEngine;
 public class ClosetHermanoController : MonoBehaviour
 {
     int idDialogo = (int)EnumDialogosId.dialogoLibro; // id para los dialogos
-    int idEvent = (int)NightmareEventosEnum.EventosEnum.evenoCAenLibros; // id para eventos    
+    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoNoPuedeCaminar; // id para eventos    
     public bool isActive = true;
     public GameObject light;
 

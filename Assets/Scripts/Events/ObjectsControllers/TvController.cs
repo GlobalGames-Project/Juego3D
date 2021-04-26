@@ -5,7 +5,7 @@ using UnityEngine;
 public class TvController : MonoBehaviour
 {
     int idDialogo = (int)EnumDialogosId.dialogoTv; // id para los dialogos
-    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoDisparoAutomatico; // id para eventos    
+    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoCamara; // id para eventos    
     public bool isActive = true;
     public GameObject light;
 

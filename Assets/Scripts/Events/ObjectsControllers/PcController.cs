@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class PcController : MonoBehaviour
 {
 	 int id_dialogo_LoL = (int)EnumDialogosId.dialogoJugarPC; // id para los dialogos
-	int id_evento_lol = (int)NightmareEventosEnum.EventosEnum.eventoDisparoRacimo;
+	int id_evento_lol = (int)NightmareEventosEnum.EventosEnum.eventoCamara;
 	public GameObject popUpBox;
 	public bool isActive = true;
 	public GameObject light;

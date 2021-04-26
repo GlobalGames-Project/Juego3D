@@ -5,7 +5,7 @@ using UnityEngine;
 public class EscobaController : MonoBehaviour
 {
     int idDialogo = (int)EnumDialogosId.dialogoEscoba; // id para los dialogos
-    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoElSueloResvala; // id para eventos    
+    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoSaltasMas; // id para eventos    
     public bool isActive = true;
     public GameObject light;
 
