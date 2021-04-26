@@ -16,6 +16,7 @@ TagManager:
   - EndingCheckpoint1
   - FallHitbox1
   - EndingCheckpoint2
+  - EndingCheckpoint3
   layers:
   - Default
   - TransparentFX
