@@ -202,7 +202,7 @@ public class ControllerFPS : MonoBehaviour
             movemenet.StopClimb();
             timeNotCheckingClimb = Time.time + 1;
 
-            currentState = State.jumping;
+            currentState = State.walking;
         }
     }
 
