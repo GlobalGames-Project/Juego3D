@@ -8,6 +8,8 @@ public class GunController : MonoBehaviour {
     State currentState;
 
     public LayerMask enemyGrapple;
+    public GameObject projectile;
+    private float cooldown;
 
     public GameObject player, camera;
 
@@ -15,7 +17,7 @@ public class GunController : MonoBehaviour {
     Shoot shoot;
     Gancho gancho;
 
-    private bool isGrappling;
+
 
     void Start() {
         currentState = State.notGrappling;
@@ -60,15 +62,19 @@ public class GunController : MonoBehaviour {
     }
 
     private void Shoot() {
-
+        if (Input.GetMouseButtonUp(1) && cooldown <= Time.time) {
+            cooldown = Time.time + 1;
+            Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+            rb.AddForce(transform.forward * 26f, ForceMode.Impulse);
+            rb.AddForce(transform.up * 5f, ForceMode.Impulse);
+        }
     }
 
     public bool IsGrappling() {
-        if (currentState == State.Grappling) return true;
-        else return false;
+        return gancho.isGrapling && currentState == State.Grappling;
     }
 
     public Vector3 GetGrapplePoint() { 
-        return gancho.GetGrapplePoint();
+        return gancho.GetGrapplePoint() ;
     }
 }

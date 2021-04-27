@@ -6,6 +6,17 @@ TagManager:
   tags:
   - Muro
   - Suelo
+  - PlayerHitbox
+  - Bullet
+  - MomCheckpoint
+  - Mom
+  - FinalMomCheckpoint
+  - MomStartChasing
+  - Enemy
+  - EndingCheckpoint1
+  - FallHitbox1
+  - EndingCheckpoint2
+  - EndingCheckpoint3
   layers:
   - Default
   - TransparentFX
@@ -20,9 +31,9 @@ TagManager:
   - Pared
   - Escalera
   - Player
-  - 
-  - 
-  - 
+  - Bullet
+  - Mom
+  - Enemy
   - 
   - 
   - 

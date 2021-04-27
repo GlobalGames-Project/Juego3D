@@ -17,6 +17,18 @@ public class TextShow : MonoBehaviour
     public string[] dialogoMadrePositivo;
     public string[] dialogoMadreNegativo;
     public string[] dialogoMadreNeutral;
+    public string[] dialogoArmarioVomitar;
+    public string[] dialogoMesaHabitacion;
+    public string[] dialogoAcariciarGato;
+    public string[] dialogoEscoba;
+    public string[] dialogoBath;
+    public string[] dialogoBorracho;
+    public string[] dialogoLlorarHermano;
+    public string[] dialogoLibro;
+    public string[] dialogoTv;
+    public string[] dialogoSillaGolpe;
+    public string[] dialogoCamaDormir;
+
 
     public TextMeshProUGUI textDialogo;
     public bool isDialogoActive;
@@ -70,6 +82,39 @@ public class TextShow : MonoBehaviour
                 break;
             case (int)EnumDialogosId.dialogoMadrePositivo:
                 dialogo = dialogoMadrePositivo;
+                break;
+            case (int)EnumDialogosId.dialogoArmarioVomitar:
+                dialogo = dialogoArmarioVomitar;
+                break;
+            case (int)EnumDialogosId.dialogoMesaHabitacion:
+                dialogo = dialogoMesaHabitacion;
+                break;
+            case (int)EnumDialogosId.dialogoAcariciarGato:
+                dialogo = dialogoAcariciarGato;
+                break;
+            case (int)EnumDialogosId.dialogoEscoba:
+                dialogo = dialogoEscoba;
+                break;
+            case (int)EnumDialogosId.dialogoBath:
+                dialogo = dialogoBath;
+                break;
+            case (int)EnumDialogosId.dialogoBorracho:
+                dialogo = dialogoBorracho;
+                break;
+            case (int)EnumDialogosId.dialogoLlorarHermano:
+                dialogo = dialogoLlorarHermano;
+                break;
+            case (int)EnumDialogosId.dialogoLibro:
+                dialogo = dialogoLibro;
+                break;
+            case (int)EnumDialogosId.dialogoTv:
+                dialogo = dialogoTv;
+                break;
+            case (int)EnumDialogosId.dialogoSillaGolpe:
+                dialogo = dialogoSillaGolpe;
+                break;
+            case (int)EnumDialogosId.dialogoCamaDormir:
+                dialogo = dialogoCamaDormir;
                 break;
             default:
                 dialogo = null;
