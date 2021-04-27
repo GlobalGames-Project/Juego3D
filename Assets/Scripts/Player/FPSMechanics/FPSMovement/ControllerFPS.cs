@@ -11,6 +11,7 @@ public class ControllerFPS : MonoBehaviour
     public LayerMask suelo;
     public LayerMask pared;
     public LayerMask climb;
+    public LayerMask everything;
     private float timeNotCheckingGround;
     private float timeNotCheckingWallrun;
     private float timeNotCheckingClimb;
@@ -27,7 +28,7 @@ public class ControllerFPS : MonoBehaviour
         ChangeCameraEvents cameraevent = ScriptableObject.CreateInstance<ChangeCameraEvents>();
         cameraevent.Init(this.gameObject);
         cameraevent.EventoAction();
-        movemenet = new PlayerMovementFPS(this.gameObject, suelo, pared, climb);
+        movemenet = new PlayerMovementFPS(this.gameObject, suelo, pared, climb, everything);
         camera = new CameraMovement(this.gameObject, this.transform.GetChild(1).GetComponent<Camera>());
     }
 
@@ -173,7 +174,8 @@ public class ControllerFPS : MonoBehaviour
 
     private void StopCrounch()
     {
-        if (InputsFPS.Crounch())
+        Debug.Log(movemenet.HeadCheck());
+        if (InputsFPS.Crounch() && !movemenet.HeadCheck())
         {
             movemenet.StopCrounch();
             currentState = State.walking;

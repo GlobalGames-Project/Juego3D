@@ -979,6 +979,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3362396861453716950, guid: cf3f9802efa38464fb9a111b29915805,
+        type: 3}
+      propertyPath: everything.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3811143502897377999, guid: cf3f9802efa38464fb9a111b29915805,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.45
+      objectReference: {fileID: 0}
     - target: {fileID: 8040406042200494722, guid: cf3f9802efa38464fb9a111b29915805,
         type: 3}
       propertyPath: mom
@@ -1023,6 +1033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -115.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100774221509575877, guid: 94de72dde1ecd224781c848284b4ff97,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 46.1
       objectReference: {fileID: 0}
     - target: {fileID: 5002082180608341345, guid: 94de72dde1ecd224781c848284b4ff97,
         type: 3}

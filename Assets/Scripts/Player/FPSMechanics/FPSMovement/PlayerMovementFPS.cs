@@ -30,7 +30,9 @@ public class PlayerMovementFPS
     public float slideCounterMovement = 0.2f;
 
     private Transform groundCheck;
+    private Transform headCheck;
     private LayerMask groundMask;
+    private LayerMask everything;
     private float groundDistance = 0.4f;
 
     private LayerMask wallRunMask;
@@ -42,11 +44,12 @@ public class PlayerMovementFPS
 
     public float jumpForce = 1000f;
 
-    public PlayerMovementFPS(GameObject currentPlayer, LayerMask suelo, LayerMask pared, LayerMask escalada)
+    public PlayerMovementFPS(GameObject currentPlayer, LayerMask suelo, LayerMask pared, LayerMask escalada, LayerMask everything)
     {
         player = currentPlayer;
         rb = currentPlayer.GetComponent<Rigidbody>();
         groundCheck = currentPlayer.transform.GetChild(0).transform;
+        headCheck = currentPlayer.transform.GetChild(3).transform;
         groundMask = suelo;
         playerScale = player.transform.localScale;
         wallRunMask = pared;
@@ -136,6 +139,11 @@ public class PlayerMovementFPS
             multiplierV = 1f;
         }
         return aux;
+    }
+
+    public bool HeadCheck()
+    {
+        return Physics.CheckSphere(headCheck.position, 4f, everything);
     }
 
     public bool WallRunCheck()
