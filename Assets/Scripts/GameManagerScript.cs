@@ -9,12 +9,14 @@ public class GameManagerScript : MonoBehaviour
     public static int health, momSpawned, ending1, ending2, ending3;
     public int whereToRespawn;
     int whereAmI;
+    public GameObject player;
+    private EventObject eventObject;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 3;
-
+        Cursor.visible = false;
         momSpawned = 0;
         ending1 = 0;
         ending2 = 0;
@@ -31,6 +33,22 @@ public class GameManagerScript : MonoBehaviour
         ending3Text.gameObject.SetActive(false);
 
 
+    }
+
+    public void EventosManager()
+    {
+        eventObject = BinariSave.Load();
+
+        for (int i = 0; i < (int)NightmareEventosEnum.EventosEnum.size; i++)
+        {
+            Debug.Log(eventObject.eventIsActive(i));
+            if (eventObject.eventIsActive(i))
+            {
+                PlayerEvents eventObject = NightmareEventosEnum.eventos[i];
+                eventObject.Init(player);
+                eventObject.EventoAction();
+            }
+        }
     }
 
     // Update is called once per frame

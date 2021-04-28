@@ -12,7 +12,7 @@ public class NightmareEventController : MonoBehaviour {
         eventObject = BinariSave.Load();
 
         for (int i = 0; i < (int) NightmareEventosEnum.EventosEnum.size; i++) {
-
+            Debug.Log(eventObject.eventIsActive(i));
             if (eventObject.eventIsActive(i))
             {
                 PlayerEvents eventObject = NightmareEventosEnum.eventos[i];
@@ -20,5 +20,6 @@ public class NightmareEventController : MonoBehaviour {
                 eventObject.EventoAction();
             }
         }
+
     }
 }
