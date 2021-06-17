@@ -17,6 +17,7 @@ TagManager:
   - FallHitbox1
   - EndingCheckpoint2
   - EndingCheckpoint3
+  - CatNav
   layers:
   - Default
   - TransparentFX
@@ -34,7 +35,7 @@ TagManager:
   - Bullet
   - Mom
   - Enemy
-  - 
+  - CatNav
   - 
   - 
   - 
