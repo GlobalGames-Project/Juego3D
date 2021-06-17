@@ -5,35 +5,34 @@ using UnityEngine.AI;
 
 public class NavMeshController : MonoBehaviour
 {
+    [HideInInspector]
     public Transform perseguirObjectivo;
-    private NavMeshAgent cat;
+
+    private NavMeshAgent navMeshAgent;
 
     void Awake()
     {
-        cat = GetComponent<NavMeshAgent>();
+        navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
-    [System.Obsolete]
     public void ActualizarPuntoDestinoNavMeshAgent(Vector3 puntoDestino)
     {
-        cat.destination = puntoDestino;
-        cat.Resume();
+        navMeshAgent.destination = puntoDestino;
+        navMeshAgent.Resume();
     }
 
-    [System.Obsolete]
     public void ActualizarPuntoDestinoNavMeshAgent()
     {
         ActualizarPuntoDestinoNavMeshAgent(perseguirObjectivo.position);
     }
 
-    [System.Obsolete]
     public void DetenerNavMeshAgent()
     {
-        cat.Stop();
+        navMeshAgent.Stop();
     }
 
     public bool HemosLlegado()
     {
-        return cat.remainingDistance <= cat.stoppingDistance && !cat.pathPending;
+        return navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance && !navMeshAgent.pathPending;
     }
 }

@@ -17,7 +17,9 @@ public class StateTurn : MonoBehaviour
     public NavMeshAgent cat;
     private StateMachineCat machineCat;
     private NavMeshController navmeshController;
-    
+    int idDialogo = (int)EnumDialogosId.dialogoAcariciarGato; // id para los dialogos
+    int idEvent = (int)NightmareEventosEnum.EventosEnum.eventoVaMasLento; // id para eventos    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,18 @@ public class StateTurn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isActive)
+        {
+
+            if (Input.GetButton("Submit"))
+            {
+                isActive = false;
+                EventGenerator.current.DialogueShow(idDialogo);
+                DiaGameManager.eventObject.setActiveEvento(idEvent);
+                light.SetActive(isActive);
+            }
+        }
+       
         dist = Vector3.Distance(transform.position, waypoints[waypointsIndex].position);
         if (dist < 1f)
         {
@@ -36,8 +50,6 @@ public class StateTurn : MonoBehaviour
         }
         Patrol();
     }
-
-    
 
     void Patrol()
     {

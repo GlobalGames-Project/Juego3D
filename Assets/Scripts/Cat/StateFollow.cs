@@ -8,10 +8,11 @@ public class StateFollow : MonoBehaviour
 {
     public NavMeshAgent cat;
     public Transform player;
+    private StateMachineCat machineCat;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
+        machineCat = GetComponent<StateMachineCat>();
     }
 
     // Update is called once per frame

@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class StateMachineCat : MonoBehaviour
 {
-    public enum State { StateFollow, StateTurn}
+    public enum State { StateFollow, StateTurn }
     private State currentState;
     public NavMeshAgent cat;
     public Transform player;
@@ -17,27 +17,8 @@ public class StateMachineCat : MonoBehaviour
 
     void Start()
     {
-        currentState = State.StateFollow;
-    }
-
-    void Update()
-    {
         CheckState();
-        if (currentState == State.StateTurn)
-        {
-            if (Input.GetKeyDown(KeyCode.Space)){ 
-                StopTurn();
-                Follow();
-            }
-        }
-
-        if (currentState == State.StateFollow)
-        {
-            if (!Input.GetKeyDown(KeyCode.Space)) { 
-                StopFollow();
-                Turn();
-            }
-        }
+        currentState = State.StateTurn;
     }
 
     private void CheckState()
@@ -45,12 +26,10 @@ public class StateMachineCat : MonoBehaviour
         switch (currentState)
         {
             case State.StateFollow:
-                StopFollow();
-                Turn();
+                Follow();
                 break;
             case State.StateTurn:
-                StopTurn();
-                Follow();
+                Turn();
                 break;
         }
     }
@@ -71,22 +50,15 @@ public class StateMachineCat : MonoBehaviour
             }
 
         }
-        currentState = State.StateTurn;
-    }
-
-    private void StopTurn()
-    {
-        currentState = State.StateFollow;
+        if (isActive = false)
+        {
+            currentState = State.StateFollow;
+        }
     }
 
     private void Follow()
     {
         cat.SetDestination(player.position);
-        currentState = State.StateFollow;
-    }
-
-    private void StopFollow()
-    {
         currentState = State.StateTurn;
     }
 }
